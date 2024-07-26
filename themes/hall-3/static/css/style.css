@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #eeba02;
+  --secondary-color: #fffad0;
+  --hall-3-blue: #1E86EF;
+  --dark-color: #2f2f2f;
+  --lighter-dark-color: #3c3c3c;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --border-radius: 0.25rem;
+  --transition: all 0.5s ease;
+}
+
+html {
+  font-family: "Urbanist", sans-serif;
+  font-size: 18px;
+  background-color: var(--primary-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--dark-color);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  font-family: "Urbanist", sans-serif;
+}
+
+.section-heading {
+  background-color: var(--secondary-color);
+  display: inline-block;
+  padding: 0 12px;
+}
+
+.page-title {
+  font-size: 4.5rem;
+}
+
+.button {
+  font-family: "Urbanist", sans-serif;
+  line-height: 14.6pt;
+  transition: background-color 0.2s ease-in-out;
+  background-color: var(--dark-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: var(--lighter-dark-color);
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.jumbotron {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.hero-section img {
+  /* For the hero images that appear their respective pages */
+  max-height: 420px;
+}
+
+/* ─── Navbar Styling ─────────────────────────────────────────────────────── */
+nav.uk-navbar-container {
+  padding: 8px;
+}
+
+.uk-navbar-container {
+  /* add this line */
+  transition: box-shadow 0.3s ease;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  /* For the navbar background color and text color */
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.uk-navbar-toggle {
+  color: var(--dark-color);
+}
+
+.uk-navbar-transparent {
+  /* styles for when navbar is not sticky */
+  box-shadow: none;
+}
+
+.uk-navbar-sticky {
+  /* styles for when navbar is sticky */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+div[uk-navbar] {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.desktop .nav-elements > * {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.desktop .nav-elements .socials svg {
+  transition: fill 0.2s ease-in-out;
+  fill: var(--dark-color);
+}
+
+.desktop .nav-elements .socials a:hover svg {
+  fill: var(--secondary-color);
+  cursor: pointer;
+}
+
+.desktop .nav-links a {
+  color: var(--dark-color);
+  text-decoration: none;
+  position: relative;
+}
+
+.desktop .nav-links a::before {
+  /* Code for the fancy underline effect */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--dark-color);
+  bottom: -3px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.desktop .nav-links a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+div[uk-navbar] .desktop ul,
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div[uk-navbar] .desktop li,
+footer ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.uk-offcanvas-reveal ul {
+  padding: 0;
+}
+
+.uk-offcanvas-bar .uk-nav-default > li > a {
+  color: var(--primary-color);
+}
+
+.uk-offcanvas-reveal .nav-links {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.uk-offcanvas-reveal .socials {
+  margin-top: 32px;
+}
+
+.uk-offcanvas-reveal .socials li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.uk-offcanvas-reveal svg {
+  /* For the social links in mobile view */
+  fill: var(--primary-color);
+}
+
+.grid-container {
+  display: grid;
+}
+
+/* ─── Footer Styling ─────────────────────────────────────────────────────── */
+footer {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: var(--dark-color);
+  min-height: 200px;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+footer img {
+  width: 124px;
+}
+
+footer p.credits {
+  margin: 0;
+  color: #765c00;
+  font-size: 0.7rem;
+}
+
+footer .credits a {
+  color: #765c00;
+}
+
+footer a {
+  color: var(--primary-color);
+  transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+footer .socials svg {
+  transition: fill 0.2s ease-in-out;
+  fill: var(--primary-color);
+}
+
+footer .socials a:hover svg {
+  fill: var(--secondary-color);
+}

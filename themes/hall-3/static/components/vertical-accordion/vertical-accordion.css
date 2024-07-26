@@ -1,0 +1,120 @@
+/* TODO: Make the vertical accordions responsive */
+
+.facility-accordions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Vertical accordion visible content styling */
+.vertical-accordion {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal accordion */
+  align-items: flex-start;
+  transition: all 0.5s ease-in-out;
+  width: 172px; /* Crucial property for the smooth animation of the width expanding */
+}
+
+.vertical-accordion .visible-content {
+  width: 132px;
+  height: 532px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.vertical-accordion .visible-content h3 {
+  margin: 0;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.visible-content hr,
+.hidden-content hr {
+  border: 3px solid;
+  border-radius: 12px;
+}
+
+.vertical-accordion .visible-content h3 div {
+  /* To target the accordion title  */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  margin-top: 46px;
+  font-weight: 600;
+}
+
+.vertical-accordion .visible-content hr {
+  width: 80%;
+  margin: 12px auto 0;
+  border-color: #2f2f2f29;
+}
+
+.accordion-item {
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  flex-shrink: 0; /* Prevent shrinking */
+  position: relative;
+  width: 100%;
+}
+
+.hidden-content {
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start hidden content off-screen */
+  background-color: var(--dark-color);
+  color: var(--secondary-color);
+  padding: 20px;
+  height: auto;
+  transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  height: calc(100% - 20px); /* Deduct 20px to account for padding */
+  width: calc(100% - 20px);
+}
+
+.hidden-content h3 {
+  color: var(--secondary-color);
+  margin: 0 0 10px 0;
+}
+
+.hidden-content hr {
+  width: 55%;
+  border-color: #fff2c220;
+}
+
+.hidden-content p,
+ul {
+  margin-top: 0;
+}
+
+.hidden-content p {
+  margin-bottom: 16px;
+}
+
+.hidden-content a {
+  color: var(--primary-color);
+}
+
+.vertical-accordion.active {
+  width: 590px; /* What causes the accordion to expand while moving the other inactive accordions */
+}
+
+.vertical-accordion.active .visible-content {
+  transform: translateX(-100%); /* Slide out of view */
+  opacity: 0; /* Fade out */
+}
+
+.vertical-accordion.active .hidden-content {
+  left: 0; /* Slide into view */
+  opacity: 1; /* Fade in */
+}

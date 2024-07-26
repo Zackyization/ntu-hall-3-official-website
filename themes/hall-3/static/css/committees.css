@@ -1,0 +1,142 @@
+:root {
+  /* TODO: In the tablet/mobile views, use calc to make the responsive sizes for the committee items */
+  --committee-image-width: 349px;
+  --committee-image-height: 392px;
+}
+
+.grid-container {
+  display: grid;
+}
+
+/* ─── Committee Section Styling ──────────────────────────────────────────── */
+ul.committees {
+  list-style: none;
+}
+
+.committees {
+  display: flex;
+}
+
+ul.committees .uk-grid {
+  height: 830px;
+}
+
+/* Committee Item stylings */
+.committee-item a {
+  width: 100%;
+  height: 100%;
+}
+
+.committee-item .image-container {
+  position: relative;
+  width: var(--committee-image-width);
+  height: var(--committee-image-height);
+  transform: skew(-5deg);
+}
+
+.committee-item .image-container:hover {
+  cursor: pointer;
+}
+
+/* Hover animation behavior for a committee item */
+.committee-item .image-container:hover .caption,
+.committee-item .image-container:hover .caption-background,
+.committee-item .image-container:hover .image {
+  transform: translate(6px, 11px);
+}
+
+.committee-item .image-container:hover .caption {
+  transform: translate(6px, 11px) skew(5deg); /* So that the caption doesn't get skewed upon hover */
+}
+
+.committee-item .caption,
+.committee-item .caption-background,
+.committee-item .image {
+  transition: transform 0.18s ease-in-out;
+}
+
+.committee-item .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.committee-item .image::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transform: skew(5deg);
+  right: -18px; /* Crucial line for making the picture fit within the skewed frame correctly */
+}
+
+.committee-item .image-background {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #d64d00, #ff8b4a);
+  transform-style: preserve-3d;
+  transform: translate(15px, 20px);
+  z-index: -1;
+}
+
+.committee-item .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--secondary-color);
+  padding: 8px 15px;
+  border-radius: 0 0 14px 0;
+  transform: skew(5deg);
+  z-index: 4;
+}
+
+.committee-item .caption-background {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 12%;
+  border-radius: 0 0 14px 0;
+  background: linear-gradient(45deg, #d64d00, #ff8b4a);
+  z-index: 3;
+}
+
+#committee-list .grid-container {
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+/* Images for the committee items */
+#ENC .image::before {
+  background-image: url(../images/committee/ENC/ENC_committee.JPG);
+}
+
+#Hall-Council .image::before {
+  background-image: url(../images/committee/Hall_Council/hall_council_committee_image.jpg);
+}
+
+#FOP .image::before {
+  background-image: url(../images/committee/FOP/fop_committee_image.jpg);
+}
+
+#FOP .caption {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+#DnD .image::before {
+  background-image: url(../images/committee/dinner_and_dance/dnd_committee.JPG);
+}

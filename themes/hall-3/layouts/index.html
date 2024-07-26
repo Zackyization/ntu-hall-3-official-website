@@ -1,0 +1,122 @@
+{{ define "main" }}
+<main role="main">
+    <article id="hero" role="article">
+        <section class="hero-section">
+          <!-- Hero section -->
+          <div class="hero-content">
+            <div class="background-content">
+              <div class="first-row">
+                <span>We do as we please as proud as can be.</span>
+                <span>We do as we please as proud as can be.</span>
+                <span>We do as we please as proud as can be.</span>
+              </div>
+              <div class="second-row">
+                <span>We do as we please as proud as can be.</span>
+                <span>We do as we please as proud as can be.</span>
+                <span>We do as we please as proud as can be.</span>
+              </div>
+              <div class="third-row">
+                <span>We do as we please as proud as can be.</span>
+                <span>We do as we please as proud as can be.</span>
+                <span>We do as we please as proud as can be.</span>
+              </div>
+            </div>
+            <div class="foreground-content uk-container uk-text-center">
+              <img src="images/lion_statue.png" alt="Lion Statue Image" />
+              <h1 class="jumbotron">Hall 3.</h1>
+              <p>Nanyang Technological University, Singapore</p>
+              <div class="scroll-down-icon">
+                <a href="#hall-brief-overview" uk-scroll>
+                  <div class="scroll"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article id="hall-brief-overview" class="uk-margin-large-top">
+        <section class="uk-container uk-flex uk-flex-center">
+          <div
+            class="hall-brief-overview-box"
+            uk-scrollspy="cls: uk-animation-slide-bottom"
+          >
+            <div class="brief-facts">
+              <span id="first-brief-fact" class="fact">
+                <p><strong>370</strong> Rooms</p>
+              </span>
+              <hr />
+              <span id="second-brief-fact" class="fact">
+                <p><span>Up to</span><strong>616</strong> Residents</p>
+              </span>
+              <hr />
+              <span id="third-brief-fact" class="fact">
+                <p><strong>10</strong> min<span>Walk to North-Spine</span></p>
+              </span>
+            </div>
+
+            <form id="overview-form">
+              <button type="submit">
+                Find out<br />more
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.29425e-05 0V9C6.29425e-05 10.0609 0.421492 11.0783 1.17164 11.8284C1.92178 12.5786 2.9392 13 4.00006 13H13.0861L10.5861 15.5L12.0001 16.914L16.9141 12L12.0001 7.086L10.5861 8.5L13.0861 11H4.00006C3.46963 11 2.96092 10.7893 2.58585 10.4142C2.21078 10.0391 2.00006 9.53043 2.00006 9V0H6.29425e-05Z"
+                    fill="#EEBA02"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </section>
+      </article>
+
+      <article id="dashboard">
+        <section class="uk-container uk-margin-large-top">
+          <div class="grid-container" uk-scrollspy="target: > div; delay: 500">
+            <a href="hallolympiad.html" title="Hall Olympiad">
+              <div
+                class="grid-item"
+                id="hall-olympiad"
+                uk-scrollspy="cls: uk-animation-slide-bottom"
+              >
+                <h3>Hall Olympiad</h3>
+              </div>
+            </a>
+            <a href="events.html">
+              <div
+                class="grid-item"
+                id="events"
+                uk-scrollspy="cls: uk-animation-slide-bottom"
+              >
+                <h3>Events</h3>
+              </div>
+            </a>
+            <a href="committees.html" title="Committees">
+              <div
+                class="grid-item"
+                id="committees"
+                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 75"
+              >
+                <h3>Committees</h3>
+              </div>
+            </a>
+            <a href="contact.html">
+              <div
+                class="grid-item"
+                id="contact"
+                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 125"
+              >
+                <h3>Contact</h3>
+              </div>
+            </a>
+          </div>
+        </section>
+      </article>
+</main>
+{{ end }}

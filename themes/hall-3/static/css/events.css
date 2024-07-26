@@ -1,0 +1,114 @@
+/* ─── Biggest Annual Event Section Styling ───────────────────────────────── */
+#biggest-annual-event h2 {
+  font-size: 20px;
+}
+
+#biggest-annual-event h3 {
+  font-size: 116px;
+  line-height: 104px;
+}
+
+/* ─── Timeline Styling ───────────────────────────────────────────────────── */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px; /* TODO: Figure out if this line is necessary for the mobile design */
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--dark-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.event {
+  position: relative;
+  width: 100%;
+}
+
+/* The circles on the timeline */
+.event-circle::after,
+.event::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--dark-color);
+}
+
+.event::after {
+  top: 0;
+  right: calc(50% - 15px);
+}
+
+/* The actual content */
+.content {
+  position: relative;
+  min-height: 360px;
+  width: 50%;
+}
+
+.content h3 {
+  font-size: 1.8rem;
+}
+
+.content p {
+  text-align: justify;
+}
+
+/* Event content that's on the left side */
+.content.left {
+  left: 0;
+}
+
+/* Event content that's on the right side */
+.content.right {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+}
+
+.content div {
+  padding: 15px 80px;
+}
+
+/* Ending event-circle positioning */
+.event-circle::after {
+  left: calc(50% - 15px);
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timeline to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .event {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}

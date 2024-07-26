@@ -1,0 +1,49 @@
+/* ─── Contact Section Styling ────────────────────────────────────────────── */
+
+#contact-section a:hover {
+  text-decoration: none;
+}
+
+.contact-item .grid-container {
+  grid-template-columns: 50px 1fr;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: color 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+
+.contact-item p {
+  font-size: 1rem;
+}
+
+.contact-item:hover,
+.contact-item:hover path,
+.contact-item:hover a {
+    color: var(--secondary-color);
+    fill: var(--secondary-color);
+}
+
+.contact-item svg {
+  margin-right: 15px;
+}
+
+.contact-item a {
+  transition: color 0.2s ease-in-out;
+  color: var(--dark-color);
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.contact-item path {
+  transition: fill 0.2s ease-in-out
+}
+
+hr {
+  width: 20vw;
+  border-width: 6px;
+  border-color: var(--dark-color);
+  border-radius: var(--border-radius);
+}

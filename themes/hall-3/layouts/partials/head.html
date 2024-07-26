@@ -1,0 +1,37 @@
+
+<title>{{.Title}} &vert; Hall 3</title>
+
+<link rel="shortcut icon" href="{{ "icons/favicon.svg" | relURL }}"
+type="image/svg+xml" />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- UIkit CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css"
+/>
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
+
+<!-- General Styles Stylesheet -->
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+
+<!-- Conditionally include page-specific CSS -->
+{{ with .Params.css }}
+  {{range .}}
+<link rel="stylesheet" href="{{ . | relURL }}" />
+  {{ end }}
+{{ end }}

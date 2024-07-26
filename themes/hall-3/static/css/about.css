@@ -1,0 +1,65 @@
+/* NOTE: Vertical accordion styling can be found in a separate file */
+
+/* ─── Hero Section Content Styling ───────────────────────────────────────── */
+#about-hero .section-content > *:not(:first-child) {
+  margin-top: 20px;
+}
+
+/* ─── Facilities Info Section Styling ────────────────────────────────────── */
+#facilities-info ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#facilities-info ul li {
+  list-style: none;
+  background-color: var(--secondary-color);
+  padding: 16px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  max-width: 327px;
+  min-width: 250px;
+  margin-top: 20px;
+}
+
+#facilities-info ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+#facilities-info li img {
+  height: 60px;
+}
+
+#facilities-info li strong {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+/* ─── Brief History Section Stylings ─────────────────────────────────────── */
+#brief-history p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.shadow-image {
+  border-radius: 12px;
+  filter: drop-shadow(15px 20px #937e34);
+}
+
+/* ─── Crest And Logo Section Stylings ────────────────────────────────────── */
+#crest-and-logo p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+#crest-and-logo .modern-logo {
+  width: 80%;
+}
+
+.uk-slidenav {
+  color: var(--dark-color);
+}
+
+.uk-slidenav:hover {
+  color: var(--lighter-dark-color);
+}

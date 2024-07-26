@@ -1,0 +1,21 @@
+#error-section {
+    /* height: 80vh; */
+    font-weight: 600;
+}
+
+#error-section p {
+    color: #927200;
+    font-size: 3.5rem;
+}
+
+#error-section h1 {
+    font-size: 6rem;
+}
+
+#zj-hippo-dog path {
+    transition: stroke 0.2s ease-in-out;
+}
+
+#zj-hippo-dog:hover path{
+    stroke: var(--secondary-color);
+}

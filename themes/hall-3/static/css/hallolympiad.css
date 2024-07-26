@@ -1,0 +1,284 @@
+:root {
+  /* TODO: In the tablet/mobile views, use calc to make the responsive sizes for the committee items */
+  --ho-item-image-width: 264px;
+  --ho-item-image-height: 277px;
+}
+
+/* TODO: Add a component css file for HO Item Cards? */
+
+/* ─── Ho Item Card Component Stylings ────────────────────────────────────── */
+ul.ho-items {
+  list-style: none;
+}
+
+.ho-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ho-item {
+  margin-top: 36px;
+  margin-right: 28px;
+}
+
+.ho-item a {
+  width: 100%;
+  height: 100%;
+}
+
+.ho-item .image-container {
+  position: relative;
+  width: var(--ho-item-image-width);
+  height: var(--ho-item-image-height);
+  transform: skew(-5deg);
+}
+
+.ho-item .image-container:hover {
+  cursor: pointer;
+}
+
+/* Hover animation behavior for a hall olympiad item */
+.ho-item .image-container:hover .caption,
+.ho-item .image-container:hover .caption-background,
+.ho-item .image-container:hover .image {
+  transform: translate(6px, 11px);
+}
+
+.ho-item .image-container:hover .caption {
+  transform: translate(6px, 11px) skew(5deg); /* So that the caption doesn't get skewed upon hover */
+}
+
+.ho-item .caption,
+.ho-item .caption-background,
+.ho-item .image {
+  transition: transform 0.18s ease-in-out;
+}
+
+.ho-item .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  background-color: gray; /* NOTE: This line is for debugging to see where the image background would be project on, you can remove it before deploying */
+}
+
+.ho-item .image::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  transform: skew(5deg);
+  right: -18px;
+}
+
+.ho-item .image-background {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform: translate(15px, 20px);
+  z-index: -1;
+}
+
+.ho-item .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 900;
+  padding: 5px 14px;
+  border-radius: 0 0 14px 0;
+  transform: skew(5deg);
+  z-index: 4;
+}
+
+.ho-item .caption-background {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 12%;
+  border-radius: 0 0 14px 0;
+  z-index: 3;
+}
+
+/* ─── Hall Olympiad Hero Section Styling ─────────────────────────────────── */
+#hall-olympiad-hero p {
+  text-align: justify;
+}
+
+.posters {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 24px;
+}
+
+.poster {
+  width: 588px;
+  height: 640px;
+  background-color: gray;
+}
+
+.poster div {
+  padding: 20px 20px;
+}
+
+.poster h3,
+.poster p {
+  text-transform: uppercase;
+}
+
+.poster h3 {
+  line-height: 28px;
+  font-weight: 800;
+}
+
+.poster p {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* ─── Sports Teams Section Styling ───────────────────────────────────────── */
+.sport-item .caption-background {
+  background: linear-gradient(45deg, #00c1aa, #4375d9);
+}
+
+.sport-item .image-background {
+  background: linear-gradient(45deg, #00c1aa, #4375d9);
+}
+
+/* Sport item images or specific individual stylings */
+#badminton .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#basketball-male .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#basketball-female .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#floorball-male .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#floorball-female .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#football .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#frisbee .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#netball .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#squash .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#table-tennis .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#tennis .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#touch-rugby .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#volleyball-male .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#volleyball-female .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+#water-polo .image::before {
+  background-image: url(../images/sports/badminton.jpg);
+}
+
+/* Recreational Teams Section Styling */
+.recreational-item .caption-background {
+  background: linear-gradient(45deg, #7b824e, #384001);
+}
+
+.recreational-item .image-background {
+  background: linear-gradient(45deg, #7b824e, #384001);
+}
+
+/* ─── Recreational Item Images Or Specific Individual Stylings ───────────── */
+#carrom .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#i-chess .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#c-chess .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#snooker .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#boggle .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#scrabble .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#darts .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#weiqi .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#othello .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+/* ─── Cultural Teams Section Styling ─────────────────────────────────────── */
+.cultural-item .caption-background {
+  background: linear-gradient(45deg, #c1005d, #d94343);
+}
+
+.cultural-item .image-background {
+  background: linear-gradient(45deg, #c1005d, #d94343);
+}
+
+/* ─── Cultural Item Images Or Specific Individual Stylings ───────────────── */
+#absolut3 .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#jamband .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}
+
+#vipers .image::before {
+  /* TODO: Put in the images for the recreational games once you find them. */
+}

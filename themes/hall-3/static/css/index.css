@@ -1,0 +1,344 @@
+/* ─── Hero Section Styling ───────────────────────────────────────────────── */
+
+body {
+  overflow-x: hidden;
+}
+
+.hero-content p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.hero-content .jumbotron {
+  line-height: 0.9;
+}
+
+.background-content span {
+  color: #dbab00;
+  font-size: 4rem;
+  font-weight: 600;
+  user-select: none;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.background-content .first-row span {
+  animation: scroll-left 28s linear infinite;
+}
+
+.background-content .second-row span {
+  animation: scroll-right 31s linear infinite;
+}
+
+.background-content .third-row span {
+  animation: scroll-left 26s linear infinite;
+}
+
+.foreground-content {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  padding-bottom: 16px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5; /* To make the lion appear in front of the scrolling text */
+}
+
+.foreground-content img {
+  width: 42%;
+}
+
+.background-content {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  white-space: nowrap;
+}
+
+/* ─── Hall Brief Overview Stylings ───────────────────────────────────────── */
+
+#hall-brief-overview .container {
+  display: flex;
+  justify-content: center;
+}
+
+.hall-brief-overview-box {
+  border: 3px solid var(--dark-color);
+  max-width: 837px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.brief-facts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 24px;
+  width: 100%;
+  min-width: 590px;
+}
+
+.brief-facts strong {
+  font-size: 3rem;
+}
+
+.brief-facts hr {
+  border: 2px solid var(--dark-color);
+  height: 80px;
+}
+
+.hall-brief-overview-box,
+#overview-form button {
+  font-size: 1.2rem;
+}
+
+.fact {
+  position: relative;
+}
+
+#second-brief-fact p > span,
+#third-brief-fact p > span {
+  position: absolute;
+  display: block;
+}
+
+#second-brief-fact p > span {
+  top: -8px;
+  font-size: 0.9rem;
+}
+
+#third-brief-fact {
+  min-width: 160px;
+}
+
+#third-brief-fact p > span {
+  top: 60px;
+  font-size: 0.95rem;
+}
+
+#overview-form {
+  height: 100%;
+  width: 100%;
+}
+
+#overview-form button {
+  transition: background-color 0.2s ease-in-out;
+  background-color: var(--dark-color);
+  color: var(--primary-color);
+  border: none;
+  height: 100%;
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+  padding: 0 26px;
+}
+
+#overview-form button:hover {
+  background-color: var(--lighter-dark-color);
+  cursor: pointer;
+}
+
+.grid-item {
+  background-color: var(
+    --dark-color
+  ); /* Default background for non-image items */
+  position: relative; /* For the overlay positioning */
+  overflow: hidden; /* To contain the zoom effect */
+  height: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+
+.grid-item h3 {
+  user-select: none;
+  color: var(--secondary-color);
+  display: inline-block;
+  left: 25px;
+  bottom: 16px;
+  font-family: "Sora", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 3;
+}
+
+.grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s linear, background-image 0.3s ease; /* Corrected transition property */
+  box-shadow: inset 1px 1px 150px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.grid-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.grid-item:hover::after {
+  opacity: 1;
+}
+
+.grid-item:hover::before {
+  background: rgba(0, 0, 0, 0.2); /* Dark overlay */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scale(1.05);
+}
+
+.grid-item:hover {
+  cursor: pointer;
+}
+
+#dashboard .grid-container {
+  grid-template-columns: 2fr 1fr 1fr; /* Adjust the ratio between the columns */
+  grid-template-rows: 250px 250px;
+  gap: 20px; /* Space between grid items */
+}
+
+#dashboard .grid-container > a:nth-child(1) {
+  /* Target the 1st grid item in the DOM */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#dashboard .grid-container > a:nth-child(2) {
+  /* Target the 2nd grid item */
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#dashboard .grid-container > a:nth-child(3) h3,
+#dashboard .grid-container > a:nth-child(4) h3 {
+  /* Target the 2nd and 3rd grid items */
+  font-size: 1.8rem;
+}
+
+/* Dashboard grid item background images */
+.grid-item#events::before {
+  background-image: url("../images/dashboard/events_dashboard_image.JPG");
+}
+
+.grid-item#committees::before {
+  background-image: url("../images/dashboard/committee_dashboard_image.jpg");
+}
+
+.grid-item#hall-olympiad::before {
+  background-image: url("../images/dashboard/hall_olympiad_dashboard.jpg");
+}
+
+.grid-item#contact::before {
+  background-image: url("../images/dashboard/contact_dashboard_image.jpg");
+}
+
+/* Keyframes for the scrolling text animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Scroll down animation stylings */
+.scroll-down-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.scroll {
+  width: 35px;
+  height: 35px;
+  border: 3px solid var(--dark-color);
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+}
+
+.scroll::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  border-left: 4px solid var(--dark-color);
+  border-bottom: 4px solid var(--dark-color);
+  transform: rotate(-45deg);
+}
+
+.scroll-down-icon a:hover .scroll,
+.scroll-down-icon a:hover .scroll::before {
+  border-color: var(--lighter-dark-color);
+}
+
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 640px) {
+  /* Responsive stylings for dashboard section */
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+  }
+  .grid-item.large {
+    grid-column: span 1; /* Adjust spanning for responsive layout */
+  }
+}
