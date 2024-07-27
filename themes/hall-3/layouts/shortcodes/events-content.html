@@ -19,7 +19,7 @@
     <section id="biggest-annual-event" class="uk-margin-large-top">
       <div class="uk-container">
         <div uk-grid>
-          <div class="uk-width-3-5">
+          <div class="uk-width-3-5" uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 30">
             <div class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1">
               <img
                 src="{{"images/events_page/yellow_tee_day_image.jpg" | relURL}}"
@@ -27,7 +27,7 @@
               />
             </div>
           </div>
-          <div class="uk-width-2-5">
+          <div class="uk-width-2-5" uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 80">
             <h2>The biggest annual event:</h2>
             <h3 class="uk-margin-medium-top">Yellow Tee Day</h3>
             <p class="uk-text-justify uk-margin-medium-top">
@@ -340,34 +340,9 @@
               </div>
             </div>
           </div>
-
-          <!-- TODO: Consider removing the Past vs Present event if you can't find an appropriate event image in time -->
+          
           <div class="event uk-margin-large-top">
-            <div class="content left">
-              <div>
-                <!-- TODO: Replace the image with an appropriate picture to use if you find one -->
-                <img
-                  src="{{"images/events_page/event_images/elite_night_cycling_event.jpg" | relURL}}"
-                  alt="Past vs Present event image"
-                />
-              </div>
-            </div>
-
             <div class="content right">
-              <div>
-                <h3>Past vs Present</h3>
-                <p class="uk-margin-small-top">
-                  Get geared up to face off with ex-residents alumni of Hall
-                  3 in various sports and recreational games and prove that
-                  the present is better than the past! It also allows
-                  residents (past or present) to bond over the sharing of
-                  pointers and competition experience throughout the day!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="event uk-margin-large-top">
-            <div class="content left">
               <div>
                 <h3>Joint&dash;Hall Iftar Night</h3>
                 <p class="uk-margin-small-top">
@@ -384,7 +359,7 @@
               </div>
             </div>
 
-            <div class="content right">
+            <div class="content left">
               <div>
                 <img
                   src="{{"images/events_page/event_images/iftar_night_event.jpg" | relURL}}"
@@ -395,7 +370,7 @@
           </div>
 
           <div class="event uk-margin-large-top">
-            <div class="content left">
+            <div class="content right">
               <div>
                 <img
                   src="{{"images/events_page/event_images/yellow_tee_day_event.JPG" | relURL}}"
@@ -404,7 +379,7 @@
               </div>
             </div>
 
-            <div class="content right">
+            <div class="content left">
               <div>
                 <h3>Yellow Tee Day</h3>
                 <p class="uk-margin-small-top">
@@ -420,7 +395,7 @@
             </div>
           </div>
           <div class="event uk-margin-large-top">
-            <div class="content left">
+            <div class="content right">
               <div>
                 <h3>Hall Appreciation Day</h3>
                 <p class="uk-margin-small-top">
@@ -435,7 +410,7 @@
               </div>
             </div>
 
-            <div class="content right">
+            <div class="content left">
               <div>
                 <img
                   src="{{"images/events_page/event_images/hall_appreciation_day_event.JPG" | relURL}}"

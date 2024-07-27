@@ -22,9 +22,9 @@
               </div>
             </div>
             <div class="foreground-content uk-container uk-text-center">
-              <img src="images/lion_statue.png" alt="Lion Statue Image" />
-              <h1 class="jumbotron">Hall 3.</h1>
-              <p>Nanyang Technological University, Singapore</p>
+              <img src="images/lion_statue.png" alt="Lion Statue Image" uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 30" />
+              <h1 class="jumbotron" uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 80">Hall 3.</h1>
+              <p uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 180">Nanyang Technological University, Singapore</p>
               <div class="scroll-down-icon">
                 <a href="#hall-brief-overview" uk-scroll>
                   <div class="scroll"></div>
@@ -79,7 +79,7 @@
       <article id="dashboard">
         <section class="uk-container uk-margin-large-top">
           <div class="grid-container" uk-scrollspy="target: > div; delay: 500">
-            <a href="hallolympiad.html" title="Hall Olympiad">
+            <a href="{{"hall-olympiad/" | relURL}}" title="Hall Olympiad">
               <div
                 class="grid-item"
                 id="hall-olympiad"
@@ -88,7 +88,7 @@
                 <h3>Hall Olympiad</h3>
               </div>
             </a>
-            <a href="events.html">
+            <a href="{{"events/" | relURL}}">
               <div
                 class="grid-item"
                 id="events"
@@ -97,16 +97,16 @@
                 <h3>Events</h3>
               </div>
             </a>
-            <a href="committees.html" title="Committees">
+            <a href="{{"committees/" | relURL}}" title="Committees">
               <div
                 class="grid-item"
                 id="committees"
-                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 75"
+                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 180"
               >
                 <h3>Committees</h3>
               </div>
             </a>
-            <a href="contact.html">
+            <a href="{{"contact/" | relURL}}">
               <div
                 class="grid-item"
                 id="contact"

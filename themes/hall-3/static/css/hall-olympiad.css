@@ -154,37 +154,47 @@ ul.ho-items {
   background: linear-gradient(45deg, #00c1aa, #4375d9);
 }
 
+.sport-item .image::before {
+  background-position: center;
+  background-size: cover;
+}
+
+#basketball-female .caption,
+#volleyball-female .caption {
+  font-size: 15px;
+}
+
 /* Sport item images or specific individual stylings */
 #badminton .image::before {
-  background-image: url(../images/sports/badminton.jpg);
+  background-image: url(../images/sports/badminton/badminton.JPG);
 }
 
 #basketball-male .image::before {
-  background-image: url(../images/sports/badminton.jpg);
+  background-image: url(../images/sports/basketball_male/basketball_male.JPG);
 }
 
 #basketball-female .image::before {
-  background-image: url(../images/sports/badminton.jpg);
+  background-image: url(../images/sports/basketball_female/basketball_female.jpg);
 }
 
 #floorball-male .image::before {
-  background-image: url(../images/sports/badminton.jpg);
+  background-image: url(../images/sports/floorball_male/floorball_male.jpg);
 }
 
 #floorball-female .image::before {
-  background-image: url(../images/sports/badminton.jpg);
+  background-image: url(../images/sports/floorball_female/floorball_female.JPG);
 }
 
 #football .image::before {
-  background-image: url(../images/sports/badminton.jpg);
+  background-image: url(../images/sports/football/football.JPG);
 }
 
 #frisbee .image::before {
-  background-image: url(../images/sports/badminton.jpg);
+  background-image: url(../images/sports/frisbee/frisbee.jpg);
 }
 
 #netball .image::before {
-  background-image: url(../images/sports/badminton.jpg);
+  background-image: url(../images/sports/netball/netball.JPG);
 }
 
 #squash .image::before {

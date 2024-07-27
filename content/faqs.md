@@ -1,5 +1,5 @@
 ---
-title: "faqs"
+title: "FAQs"
 css: 
     - "css/faqs.css"
     - "components/faq-accordion/faq-accordion.css"

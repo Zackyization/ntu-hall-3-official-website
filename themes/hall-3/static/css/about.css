@@ -63,3 +63,11 @@
 .uk-slidenav:hover {
   color: var(--lighter-dark-color);
 }
+
+.uk-dotnav > * > * {
+  border-color: var(--dark-color);
+}
+
+.uk-dotnav > .uk-active > * {
+  background-color: var(--dark-color);
+}
