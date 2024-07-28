@@ -232,6 +232,10 @@ ul.ho-items {
   background-image: url(../images/sports/tennis/thumbnail.JPG);
 }
 
+#track .image::before {
+  background-image: url(../images/sports/track/thumbnail.jpg);
+}
+
 #touch-rugby .image::before {
   background-image: url(../images/sports/touch_rugby/thumbnail.JPG);
 }
