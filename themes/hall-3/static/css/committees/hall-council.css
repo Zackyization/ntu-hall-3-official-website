@@ -1,0 +1,11 @@
+/* ─── Hall Council Content Styling ───────────────────────────────────────── */
+
+#hero h2 {
+    font-size: 24px!important;
+}
+
+#hero strong {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 12px;
+}

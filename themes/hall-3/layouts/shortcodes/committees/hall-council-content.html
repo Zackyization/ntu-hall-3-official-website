@@ -1,16 +1,104 @@
 <article>
-    <section id="hero">
-        <div class="uk-container">
-            <div class="uk-text-center">
-                <h1 class="page-title">Hall Council</h1>
-                <div class="uk-flex uk-flex-center uk-flex-column">
-                    <!-- LEFT OFF HERE: Continue doing up the markup code for this page -->
-                     <!-- TODO: Get the images of old hall council banners -->
-                    <p class="uk-text-justify">Consisting of 12 portfolios, Hall Council is responsible for the organisation and facilitation of hall events and activities which includes: sports, recreational  and cultural. The Hall Council has an important role of bonding the hall residents together through events and promoting  academic, social, cultural, sporting and recreational activities in hall. The Hall Council will also create and develop a sense of identity and belonging to Hall 3 for the residents, through various events every year.</p>
-    
-                    <p>The 41st Hall Council is the current governing student of NTU Hall of Residence 3 for AY2023/24</p>
-                </div>
-            </div>
+  <section id="hero">
+    <div class="uk-container">
+      <h1 class="page-title uk-text-center">Hall Council</h1>
+      <div class="uk-flex uk-flex-center">
+        <div class="uk-width-1-2 uk-margin-small-top uk-text-justify">
+          <p>
+            Consisting of 12 portfolios, Hall Council is responsible for the
+            organisation and facilitation of hall events and activities which
+            includes: sports, recreational and cultural.
+            <br />
+            <br />
+            The Hall Council has an important role of bonding the hall residents
+            together through events and promoting academic, social, cultural,
+            sporting and recreational activities in hall. The Hall Council will
+            also create and develop a sense of identity and belonging to Hall 3
+            for the residents, through various events every year.
+          </p>
         </div>
-    </section>
+      </div>
+      <div
+        class="uk-flex uk-flex-center uk-flex-column uk-text-center uk-margin-medium-top"
+        uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 100"
+      >
+        <h2>
+          Current governing student body:<br /><strong class="section-heading"
+            >41st Hall Council</strong
+          >
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section id="hall-council-images">
+    <div class="uk-container">
+      <div
+        class="uk-margin-medium-top"
+        uk-lightbox
+        uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 100"
+      >
+        <a
+          href="{{ "images/committee/Hall_Council/councils/41st_hall_council.png" | relURL }}"
+        >
+          <img
+            src="{{ "images/committee/Hall_Council/councils/41st_hall_council.png" | relURL }}"
+            alt="41st Hall Council"
+          />
+        </a>
+      </div>
+
+      <h2 class="uk-text-center uk-margin-medium-top">Past Councils</h2>
+      <!-- CURRENT: TODO: Add in the past images of the past councils -->
+      <div class="past-councils uk-grid-small uk-grid-match" uk-grid>
+        <div class="uk-width-1-3" uk-lightbox>
+          <a
+            href="{{ "images/committee/Hall_Council/councils/40th_hall_council.png" | relURL }}"
+          >
+            <img
+              width="100%"
+              src="{{ "images/committee/Hall_Council/councils/40th_hall_council.png" | relURL }}"
+              alt="40th Hall Council"
+            />
+          </a>
+        </div>
+        
+        <div class="uk-width-1-3" uk-lightbox>
+          <a
+            href="{{ "images/committee/Hall_Council/councils/39th_hall_council.png" | relURL }}"
+          >
+            <img
+              width="100%"
+              src="{{ "images/committee/Hall_Council/councils/39th_hall_council.png" | relURL }}"
+              alt="40th Hall Council"
+            />
+          </a>
+        </div>
+
+        <div class="uk-width-1-3" uk-lightbox>
+          <a
+            href="{{ "images/committee/Hall_Council/councils/38th_hall_council.jpg" | relURL }}"
+          >
+            <img
+              width="100%"
+              src="{{ "images/committee/Hall_Council/councils/38th_hall_council.jpg" | relURL }}"
+              alt="40th Hall Council"
+            />
+          </a>
+        </div>
+
+        <div class="uk-width-1-3" uk-lightbox>
+          <a
+            href="{{ "images/committee/Hall_Council/councils/37th_hall_council.jpg" | relURL }}"
+          >
+            <img
+              width="100%"
+              src="{{ "images/committee/Hall_Council/councils/37th_hall_council.jpg" | relURL }}"
+              alt="40th Hall Council"
+            />
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
 </article>
