@@ -20,14 +20,21 @@
           </div>
           <div class="uk-width-1-2">
             <!-- Dynamically load the title, caption and images -->
-            {{ $base := .File.BaseFileName }}
+            {{ $baseFileName := .File.BaseFileName }}
+            {{ $sections := split .File.Path "\\" }}
+
+            <!-- Get the base file name of the current file e.g. badminton -->
+            {{ $baseCategory := index $sections 0 }}
+            <!-- Get the category under hall-olympiad e.g. sports, recreational or cultural -->
+            {{ $subCategory := index $sections 1 }}
+
             {{ $extensions := slice "jpg" "JPG" "png" "PNG" }}
             {{ $imgPath := "" }}
             {{ $imgSrc := "" }}
             {{ $prefix := "static/" }}
 
             {{ range $extensions }}
-              {{ $path := printf "static/images/committee/%s/thumbnail.%s" $base . }}
+              {{ $path := printf "static/images/%s/%s/%s/thumbnail.%s" $baseCategory $subCategory $baseFileName . }}
               {{ if and (eq $imgPath "") (fileExists $path) }}
                 {{ $imgPath = $path }}
                 {{ $imgSrc = substr $imgPath (len $prefix) }}
@@ -59,15 +66,14 @@
           uk-grid
           uk-lightbox="animation: slide"
         >
-          {{ $base := .File.BaseFileName }}
-          {{ $themeStaticDir := "themes/hall-3/static" }}
-          {{ $imageDir := printf "%s/images/committee/%s" $themeStaticDir $base }}
+        {{ $themeStaticDir := "themes/hall-3/static" }}
+          {{ $imageDir := printf "%s/images/%s/%s/%s"   $themeStaticDir $baseCategory $subCategory $baseFileName }}
           {{ $images := readDir $imageDir }}
           {{ if $images }}
             {{ range $images }}
               {{ $imgName := .Name }}
               {{ if not (or (eq $imgName "thumbnail.jpg") (eq $imgName "thumbnail.JPG") (eq $imgName "thumbnail.png") (eq $imgName "thumbnail.PNG")) }}
-                {{ $imgPath := printf "images/committee/%s/%s" $base $imgName }}
+                {{ $imgPath := printf "images/%s/%s/%s/%s" $baseCategory $subCategory $baseFileName $imgName }}
                 <div>
                   <a class="uk-inline" href="{{ $imgPath | relURL }}">
                     <img src="{{ $imgPath | relURL }}" alt="{{ $imgName }}" />
@@ -78,7 +84,7 @@
           {{ else }}
             <p>No images found in {{ $imageDir }}</p>
           {{ end }}
-        </div>
+      </div>
       </div>
     </section>
   </article>

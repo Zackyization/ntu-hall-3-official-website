@@ -169,87 +169,87 @@ ul.ho-items {
 
 /* Sport item images or specific individual stylings */
 #badminton .image::before {
-  background-image: url(../images/sports/badminton/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/badminton/thumbnail.JPG);
 }
 
 #basketball-male .image::before {
-  background-image: url(../images/sports/basketball_male/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/basketball_male/thumbnail.JPG);
 }
 
 #basketball-female .image::before {
-  background-image: url(../images/sports/basketball_female/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/basketball_female/thumbnail.jpg);
 }
 
 #floorball-male .image::before {
-  background-image: url(../images/sports/floorball_male/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/floorball_male/thumbnail.jpg);
 }
 
 #floorball-female .image::before {
-  background-image: url(../images/sports/floorball_female/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/floorball_female/thumbnail.JPG);
 }
 
 #football .image::before {
-  background-image: url(../images/sports/football/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/football/thumbnail.JPG);
 }
 
 #frisbee .image::before {
-  background-image: url(../images/sports/frisbee/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/frisbee/thumbnail.jpg);
 }
 
 #netball .image::before {
-  background-image: url(../images/sports/netball/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/netball/thumbnail.JPG);
 }
 
 #road-relay .image::before {
-  background-image: url(../images/sports/road_relay/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/road_relay/thumbnail.jpg);
 }
 
 #sepak-takraw .image::before {
-  background-image: url(../images/sports/sepak_takraw/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/sepak_takraw/thumbnail.jpg);
 }
 
 #softball-male .image::before {
-  background-image: url(../images/sports/softball_male/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/softball_male/thumbnail.jpg);
 }
 
 #softball-female .image::before {
-  background-image: url(../images/sports/softball_female/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/softball_female/thumbnail.JPG);
 }
 
 #squash .image::before {
-  background-image: url(../images/sports/squash/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/squash/thumbnail.jpg);
 }
 
 #swimming .image::before {
-  background-image: url(../images/sports/swimming/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/swimming/thumbnail.JPG);
 }
 
 #table-tennis .image::before {
-  background-image: url(../images/sports/table_tennis/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/table_tennis/thumbnail.JPG);
 }
 
 #tennis .image::before {
-  background-image: url(../images/sports/tennis/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/tennis/thumbnail.JPG);
 }
 
 #track .image::before {
-  background-image: url(../images/sports/track/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/track/thumbnail.jpg);
 }
 
 #touch-rugby .image::before {
-  background-image: url(../images/sports/touch_rugby/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/touch_rugby/thumbnail.JPG);
 }
 
 #volleyball-male .image::before {
-  background-image: url(../images/sports/volleyball_male/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/volleyball_male/thumbnail.JPG);
 }
 
 #volleyball-female .image::before {
-  background-image: url(../images/sports/volleyball_female/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/volleyball_female/thumbnail.JPG);
 }
 
 #water-polo .image::before {
-  background-image: url(../images/sports/water_polo/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/water_polo/thumbnail.jpg);
 }
 
 /* Recreational Teams Section Styling */
@@ -263,40 +263,40 @@ ul.ho-items {
 
 /* ─── Recreational Item Images Or Specific Individual Stylings ───────────── */
 #carrom .image::before {
-  background-image: url(../images/recreational/carrom/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/carrom/thumbnail.JPG);
 }
 
 #i-chess .image::before {
-  background-image: url(../images/recreational/i-chess/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/i-chess/thumbnail.JPG);
 
 }
 
 #c-chess .image::before {
-  background-image: url(../images/recreational/c-chess/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/c-chess/thumbnail.JPG);
 }
 
 #snooker .image::before {
-  background-image: url(../images/recreational/snooker/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/snooker/thumbnail.JPG);
 }
 
 #boggle .image::before {
-  background-image: url(../images/recreational/boggle/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/boggle/thumbnail.JPG);
 }
 
 #scrabble .image::before {
-  background-image: url(../images/recreational/scrabble/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/scrabble/thumbnail.JPG);
 }
 
 #darts .image::before {
-  background-image: url(../images/recreational/darts/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/darts/thumbnail.JPG);
 }
 
 #weiqi .image::before {
-  background-image: url(../images/recreational/weiqi/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/weiqi/thumbnail.JPG);
 }
 
 #othello .image::before {
-  background-image: url(../images/recreational/othello/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/recreational/othello/thumbnail.JPG);
 }
 
 /* ─── Cultural Teams Section Styling ─────────────────────────────────────── */
@@ -310,13 +310,13 @@ ul.ho-items {
 
 /* ─── Cultural Item Images Or Specific Individual Stylings ───────────────── */
 #absolut3 .image::before {
-  background-image: url(../images/cultural/absolut3/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/cultural/absolut3/thumbnail.jpg);
 }
 
 #jamband .image::before {
-  background-image: url(../images/cultural/jamband/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/cultural/jamband/thumbnail.jpg);
 }
 
 #vipers .image::before {
-  background-image: url(../images/cultural/vipers/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/cultural/vipers/thumbnail.jpg);
 }
