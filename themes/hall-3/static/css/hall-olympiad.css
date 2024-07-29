@@ -173,19 +173,19 @@ ul.ho-items {
 }
 
 #basketball-male .image::before {
-  background-image: url(../images/hall-olympiad/sports/basketball_male/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/basketball-male/thumbnail.JPG);
 }
 
 #basketball-female .image::before {
-  background-image: url(../images/hall-olympiad/sports/basketball_female/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/basketball-female/thumbnail.jpg);
 }
 
 #floorball-male .image::before {
-  background-image: url(../images/hall-olympiad/sports/floorball_male/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/floorball-male/thumbnail.jpg);
 }
 
 #floorball-female .image::before {
-  background-image: url(../images/hall-olympiad/sports/floorball_female/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/floorball-female/thumbnail.JPG);
 }
 
 #football .image::before {
@@ -201,19 +201,19 @@ ul.ho-items {
 }
 
 #road-relay .image::before {
-  background-image: url(../images/hall-olympiad/sports/road_relay/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/road-relay/thumbnail.jpg);
 }
 
 #sepak-takraw .image::before {
-  background-image: url(../images/hall-olympiad/sports/sepak_takraw/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/sepak-takraw/thumbnail.jpg);
 }
 
 #softball-male .image::before {
-  background-image: url(../images/hall-olympiad/sports/softball_male/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/softball-male/thumbnail.jpg);
 }
 
 #softball-female .image::before {
-  background-image: url(../images/hall-olympiad/sports/softball_female/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/softball-female/thumbnail.JPG);
 }
 
 #squash .image::before {
@@ -225,7 +225,7 @@ ul.ho-items {
 }
 
 #table-tennis .image::before {
-  background-image: url(../images/hall-olympiad/sports/table_tennis/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/table-tennis/thumbnail.JPG);
 }
 
 #tennis .image::before {
@@ -237,19 +237,19 @@ ul.ho-items {
 }
 
 #touch-rugby .image::before {
-  background-image: url(../images/hall-olympiad/sports/touch_rugby/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/touch-rugby/thumbnail.JPG);
 }
 
 #volleyball-male .image::before {
-  background-image: url(../images/hall-olympiad/sports/volleyball_male/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/volleyball-male/thumbnail.JPG);
 }
 
 #volleyball-female .image::before {
-  background-image: url(../images/hall-olympiad/sports/volleyball_female/thumbnail.JPG);
+  background-image: url(../images/hall-olympiad/sports/volleyball-female/thumbnail.JPG);
 }
 
 #water-polo .image::before {
-  background-image: url(../images/hall-olympiad/sports/water_polo/thumbnail.jpg);
+  background-image: url(../images/hall-olympiad/sports/water-polo/thumbnail.jpg);
 }
 
 /* Recreational Teams Section Styling */

@@ -23,6 +23,7 @@
             {{ $baseFileName := .File.BaseFileName }}
             {{ $sections := split .File.Path "\\" }}
 
+
             <!-- Get the base file name of the current file e.g. badminton -->
             {{ $baseCategory := index $sections 0 }}
             <!-- Get the category under hall-olympiad e.g. sports, recreational or cultural -->
@@ -59,14 +60,17 @@
       <div class="uk-container">{{ .Content }}</div>
     </section>
     <section>
-      <div class="uk-container uk-margin-medium-top">
+      <div
+        class="uk-container uk-margin-medium-top"
+        uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 160"
+      >
         <h2 class="uk-text-center">Gallery</h2>
         <div
           class="uk-child-width-1-3@m uk-margin-small-top"
           uk-grid
           uk-lightbox="animation: slide"
         >
-        {{ $themeStaticDir := "themes/hall-3/static" }}
+          {{ $themeStaticDir := "themes/hall-3/static" }}
           {{ $imageDir := printf "%s/images/%s/%s/%s"   $themeStaticDir $baseCategory $subCategory $baseFileName }}
           {{ $images := readDir $imageDir }}
           {{ if $images }}
@@ -84,7 +88,7 @@
           {{ else }}
             <p>No images found in {{ $imageDir }}</p>
           {{ end }}
-      </div>
+        </div>
       </div>
     </section>
   </article>
