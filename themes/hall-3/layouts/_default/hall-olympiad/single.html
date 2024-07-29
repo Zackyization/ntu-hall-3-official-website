@@ -21,8 +21,8 @@
           <div class="uk-width-1-2">
             <!-- Dynamically load the title, caption and images -->
             {{ $baseFileName := .File.BaseFileName }}
-            {{ $sections := split .File.Path "\\" }}
-
+            {{ $normalizedPath := replace .File.Path "\\" "/" }} <!-- Normalize path -->
+            {{ $sections := split $normalizedPath "/" }}
 
             <!-- Get the base file name of the current file e.g. badminton -->
             {{ $baseCategory := index $sections 0 }}

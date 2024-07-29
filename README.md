@@ -1,12 +1,8 @@
 [![hugo](https://user-images.githubusercontent.com/43764894/223559747-e9d7f19d-91bf-46a9-a0cb-8d6a40d3cfa3.png)](https://ntl.fyi/3P9w1mr)
 
-# Hugo Quickstart Template   
+# NTU Hall 3 Official Website
+This is the repository containing the source code for the official NTU Hall 3 website which can be found [here.](https://hall3.netlify.app) 
 
-This is a bare-bones Hugo project that has everything you need to quickly deploy it to [Netlify](https://netlify.com). 
-
-Hate reading, here's a video: https://youtu.be/t-tsRxxYdpk
-
-Love reading, here's blog post: https://www.netlify.com/blog/deploy-your-hugo-app-quick/
 
 ## Table of Contents:
 
@@ -16,7 +12,6 @@ Love reading, here's blog post: https://www.netlify.com/blog/deploy-your-hugo-ap
   - [Deploying](#2-deploying)
 - [Styling](#styling)
   - [Notes on Styling](#notes-on-styling)
-  - [Remove Styling](#remove-styling)
 - [Hugo + Netlify Resources](#hugo--netlify-resources)
 - [Testing](#testing)
   - [Included Default Testing](#included-default-testing)
@@ -77,9 +72,6 @@ The variables below give you the ability to change the gradient colors of the bl
 --bttm-left-blur-2: #0095cc;
 ```
 
-## Remove Styling
-
-If you decide that our styling is not for you, all you'll need to do is remove the [demo-styling.css](https://github.com/netlify-templates/hugo-quickstart/blob/main/themes/netlify-basic/static/css/demo-styling.css) file. 
 
 ## Hugo + Netlify Resources
 
@@ -107,29 +99,3 @@ If your team is not interested in this tooling, you can remove them with ease!
 ### Removing Renovate
 
 In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
-
-### Removing Cypress
-
-For our testing, we use [Cypress](https://www.cypress.io/) for end-to-end testing. This makes sure that we can validate that our templates are rendering and displaying as we’d expect. By default, we have Cypress not generate deploy links if our tests don’t pass. If you’d like to keep Cypress and still generate the deploy links, go into your `netlify.toml` and delete the plugin configuration lines:
-
-```diff
-[[plugins]]
-  package = "netlify-plugin-cypress"
--  [plugins.inputs.postBuild]
--    enable = true
--
--  [plugins.inputs]
--    enable = false 
-```
-
-If you’d like to remove the `netlify-plugin-cypress` build plugin entirely, you’d need to delete the entire block above instead. And then make sure sure to remove the package from the dependencies using:
-
-```bash
-npm uninstall -D netlify-plugin-cypress
-```
-
-And lastly if you’d like to remove Cypress entirely, delete the entire `cypress` folder and the `cypress.config.ts` file. Then remove the dependency using:
-
-```bash
-npm uninstall cypress
-```
