@@ -1,0 +1,86 @@
+{{ define "main" }}
+  <article role="article">
+    <section>
+      <div class="uk-container">
+        <div uk-grid>
+          <div class="uk-width-1-2">
+            <div class="uk-flex uk-flex-center uk-flex-column uk-height-1-1">
+              <h1
+                uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 60"
+              >
+                {{ .Title }}
+              </h1>
+              <p
+                uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 100"
+                class="uk-text-justify uk-margin-medium-top"
+              >
+                {{ .Description }}
+              </p>
+            </div>
+          </div>
+          <div class="uk-width-1-2">
+            <!-- Dynamically load the title, caption and images -->
+            {{ $base := .File.BaseFileName }}
+            {{ $extensions := slice "jpg" "JPG" "png" "PNG" }}
+            {{ $imgPath := "" }}
+            {{ $imgSrc := "" }}
+            {{ $prefix := "static/" }}
+
+            {{ range $extensions }}
+              {{ $path := printf "static/images/committee/%s/thumbnail.%s" $base . }}
+              {{ if and (eq $imgPath "") (fileExists $path) }}
+                {{ $imgPath = $path }}
+                {{ $imgSrc = substr $imgPath (len $prefix) }}
+              {{ end }}
+            {{ end }}
+
+            {{ if $imgSrc }}
+              <div
+                uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 160"
+                class="uk-flex uk-flex-center uk-flex-column uk-height-1-1"
+              >
+                <img src="{{ $imgSrc | relURL }}" alt="Thumbnail" />
+              </div>
+            {{ else }}
+              <div class="uk-flex uk-flex-center uk-flex-column uk-height-1-1">
+                <p>No thumbnail available.</p>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      <div class="uk-container">{{ .Content }}</div>
+    </section>
+    <section>
+      <div class="uk-container uk-margin-medium-top">
+        <h2 class="uk-text-center">Gallery</h2>
+        <div
+          class="uk-child-width-1-3@m uk-margin-small-top"
+          uk-grid
+          uk-lightbox="animation: slide"
+        >
+          {{ $base := .File.BaseFileName }}
+          {{ $themeStaticDir := "themes/hall-3/static" }}
+          {{ $imageDir := printf "%s/images/committee/%s" $themeStaticDir $base }}
+          {{ $images := readDir $imageDir }}
+          {{ if $images }}
+            {{ range $images }}
+              {{ $imgName := .Name }}
+              {{ if not (or (eq $imgName "thumbnail.jpg") (eq $imgName "thumbnail.JPG") (eq $imgName "thumbnail.png") (eq $imgName "thumbnail.PNG")) }}
+                {{ $imgPath := printf "images/committee/%s/%s" $base $imgName }}
+                <div>
+                  <a class="uk-inline" href="{{ $imgPath | relURL }}">
+                    <img src="{{ $imgPath | relURL }}" alt="{{ $imgName }}" />
+                  </a>
+                </div>
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            <p>No images found in {{ $imageDir }}</p>
+            <!-- Debug: No images found -->
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  </article>
+{{ end }}

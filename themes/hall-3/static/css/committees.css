@@ -121,15 +121,15 @@ ul.committees .uk-grid {
 
 /* Images for the committee items */
 #ENC .image::before {
-  background-image: url(../images/committee/ENC/ENC_committee.JPG);
+  background-image: url(../images/committee/elite-night-cycling/thumbnail.JPG);
 }
 
 #Hall-Council .image::before {
-  background-image: url(../images/committee/Hall_Council/hall_council_committee_image.jpg);
+  background-image: url(../images/committee/hall-council/thumbnail.jpg);
 }
 
 #FOP .image::before {
-  background-image: url(../images/committee/FOP/fop_committee_image.jpg);
+  background-image: url(../images/committee/freshmen-orientation-programme/thumbnail.jpg);
 }
 
 #FOP .caption {
@@ -138,5 +138,5 @@ ul.committees .uk-grid {
 }
 
 #DnD .image::before {
-  background-image: url(../images/committee/dinner_and_dance/dnd_committee.JPG);
+  background-image: url(../images/committee/dinner-and-dance/thumbnail.JPG);
 }
