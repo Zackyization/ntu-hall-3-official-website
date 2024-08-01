@@ -2,7 +2,8 @@
 title: "Events"
 css: 
     - "css/events.css"
-js: []
+js: 
+    - "js/events/events.js"
 ---
 
 {{< events-content >}}
