@@ -14,6 +14,10 @@ body {
   line-height: 0.9;
 }
 
+.hero-section img {
+  max-height: none;
+}
+
 .background-content span {
   color: #dbab00;
   font-size: 4rem;
@@ -48,7 +52,7 @@ body {
 }
 
 .foreground-content img {
-  width: 42%;
+  /* width: 42%; */
 }
 
 .background-content {
@@ -69,8 +73,6 @@ body {
   border: 3px solid var(--dark-color);
   max-width: 837px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .brief-facts {
@@ -177,7 +179,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition: transform 0.2s linear, background-image 0.3s ease; /* Corrected transition property */
+  transition:
+    transform 0.2s linear,
+    background-image 0.3s ease; /* Corrected transition property */
   box-shadow: inset 1px 1px 150px rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
@@ -295,8 +299,8 @@ body {
 .scroll::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 11px;
+  top: 8px;
+  left: 8px;
   width: 10px;
   height: 10px;
   border-radius: 2px;
@@ -334,12 +338,83 @@ body {
   }
 }
 
-@media (max-width: 640px) {
-  /* Responsive stylings for dashboard section */
-  .grid-container {
+@media (max-width: 959px) {
+  /* Dashboard Section Tablet Stylings */
+  #dashboard .grid-container {
     grid-template-columns: 1fr; /* Stack items on smaller screens */
+    grid-template-rows: 1fr 1fr 1fr;
   }
-  .grid-item.large {
-    grid-column: span 1; /* Adjust spanning for responsive layout */
+
+  #dashboard .grid-container > a:nth-child(1),
+  #dashboard .grid-container > a:nth-child(2),
+  #dashboard .grid-container > a:nth-child(3),
+  #dashboard .grid-container > a:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  #dashboard .grid-container > a:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 640px;
+  }
+
+  #dashboard .grid-container > a:nth-child(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #dashboard .grid-container > a:nth-child(3) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  #dashboard .grid-container > a:nth-child(4) {
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
+
+@media (max-width: 640px) {
+  /* ─── Hero Section Mobile Stylings ───────────────────────────────────────── */
+  .hall-brief-overview-box {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .background-content span {
+    font-size: 2.4rem;
+  }
+
+  /* ─── Brief Overview Mobile Stylings ─────────────────────────────────────── */
+  .hall-brief-overview-box {
+    max-width: 90%;
+  }
+
+  .brief-facts {
+    flex-direction: column;
+    justify-content: center;
+    min-width: auto;
+    padding: 32px 24px;
+  }
+
+  .brief-facts hr {
+    border: 2px solid var(--dark-color);
+    height: 0;
+    margin: 24px;
+    width: 80px;
+  }
+
+  #overview-form button {
+    width: 100%;
+    padding: 32px 0px;
+  }
+
+  #third-brief-fact p {
+    text-align: center;
+  }
+
+  #dashboard .grid-container > a:nth-child(1) {
+    height: auto;
   }
 }

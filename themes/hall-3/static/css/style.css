@@ -17,6 +17,16 @@ html {
   background-color: var(--primary-color);
 }
 
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make sure all child elements do not cause overflow */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
