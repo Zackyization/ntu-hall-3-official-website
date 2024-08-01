@@ -78,7 +78,7 @@
   height: auto;
   transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
   opacity: 0;
-  height: calc(100% - 20px); /* Deduct 20px to account for padding */
+  height: 100%; 
   width: calc(100% - 20px);
 }
 
@@ -117,4 +117,11 @@ ul {
 .vertical-accordion.active .hidden-content {
   left: 0; /* Slide into view */
   opacity: 1; /* Fade in */
+}
+
+/* Vertical Accordion will be hidden for tablets or smaller */
+@media (max-width: 960px) {
+  .facility-accordions {
+    display: none;
+  }
 }

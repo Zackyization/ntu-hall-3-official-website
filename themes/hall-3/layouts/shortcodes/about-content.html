@@ -3,12 +3,15 @@
     <div class="uk-container">
       <div class="uk-flex uk-flex-center">
         <img
-          src="{{"images/page_hero_images/Hall_3_image.png" | relURL}}"
+          src="{{ "images/page_hero_images/Hall_3_image.png" | relURL }}"
           alt="A faint image of Hall 3 Block C."
           uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 30"
         />
       </div>
-      <div class="section-content uk-text-center" uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 180">
+      <div
+        class="section-content uk-text-center"
+        uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 180"
+      >
         <h1 class="page-title">About Us</h1>
         <p>
           Hall 3 is one of the many on-campus housing options made available to
@@ -27,14 +30,14 @@
 
 <article>
   <section id="facilities-info" class="uk-margin-medium-top">
-    <div class="uk-container">
-      <ul class="uk-flex uk-flex-center">
+    <div class="uk-container uk-flex uk-flex-center">
+      <ul id="facility-info-items" class="uk-flex uk-flex-center">
         <li
           class="facility-item uk-flex uk-flex-center uk-flex-middle uk-flex-around"
           uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 60"
         >
           <img
-            src="{{"icons/facility_info_icons/aircon_rooms.svg" | relURL}}"
+            src="{{ "icons/facility_info_icons/aircon_rooms.svg" | relURL }}"
             alt="Air-conditioned rooms icon"
           />
           <div>Air-Conditioned<br />Rooms</div>
@@ -44,7 +47,7 @@
           uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false"
         >
           <img
-            src="{{"icons/facility_info_icons/single_bed.svg" | relURL}}"
+            src="{{ "icons/facility_info_icons/single_bed.svg" | relURL }}"
             alt="Single rooms icon"
           />
           <div><strong>124</strong><br />Single Rooms</div>
@@ -54,7 +57,7 @@
           uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 95"
         >
           <img
-            src="{{"icons/facility_info_icons/double_beds.svg" | relURL}}"
+            src="{{ "icons/facility_info_icons/double_beds.svg" | relURL }}"
             alt="Double rooms icon"
           />
           <div><strong>246</strong><br />Double Rooms</div>
@@ -63,7 +66,10 @@
           class="facility-item uk-flex uk-flex-center uk-flex-middle uk-flex-around"
           uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 100"
         >
-          <img src="{{"icons/facility_info_icons/gym.svg" | relURL}}" alt="Gym icon" />
+          <img
+            src="{{ "icons/facility_info_icons/gym.svg" | relURL }}"
+            alt="Gym icon"
+          />
           <div>Gym for all<br />residents</div>
         </li>
         <li
@@ -71,7 +77,7 @@
           uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 125"
         >
           <img
-            src="{{"icons/facility_info_icons/canteens.svg" | relURL}}"
+            src="{{ "icons/facility_info_icons/canteens.svg" | relURL }}"
             alt="Canteens icon"
           />
           <div>Canteens<br />Nearby</div>
@@ -92,7 +98,7 @@
       </h2>
       <div class="uk-flex uk-flex-center">
         <p
-          class="uk-text-justify uk-width-1-2 uk-margin-medium-top"
+          class="uk-text-justify uk-width-1-2@l uk-margin-medium-top"
           uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false;"
         >
           Explore the <strong>wide array</strong> of
@@ -260,15 +266,13 @@
                     <li>NIE Canteen</li>
                   </ul>
 
-                  <p>Academic North Spine food outlets&colon;</p>
+                  <p>Some North Spine food outlets&colon;</p>
                   <ul>
                     <li>Koufu</li>
                     <li>McDonald&apos;s</li>
                     <li>Subway</li>
                     <li>Popeye&apos;s</li>
                     <li>Starbucks Coffee</li>
-                    <li>Paik&apos;s Bibim</li>
-                    <li>Encik Tan</li>
                   </ul>
                 </div>
 
@@ -288,6 +292,150 @@
           </div>
         </div>
       </div>
+
+      <div class="facility-accordions-mobile uk-hidden@l">
+        <!-- CURRENT: TODO: Implement the horizontal accordions from the FAQ page into this section -->
+        <div class="accordions uk-margin-small-top">
+          <div class="faq-accordion js-accordion">
+            <div class="faq-accordion__item js-accordion-item">
+              <div class="faq-accordion-header js-accordion-header">
+                <h3>01. Accomodation</h3>
+              </div>
+              <div class="faq-accordion-body js-accordion-body">
+                <div class="faq-accordion-body__contents">
+                  <p>370 Fully Air-Conditioned rooms</p>
+                  <ul>
+                    <li>124 Single rooms</li>
+                    <li>246 Double rooms</li>
+                  </ul>
+                  <p>
+                    Each room is furnished with cupboards, shelves, desk lights
+                    & ceiling fans.
+                  </p>
+                  <br />
+                  <p>
+                    Power sockets and internet access &#40;via ethernet
+                    cable&#41; available.
+                  </p>
+                  <p>Fridge may be installed at a fee.</p>
+                  <br />
+                  <p>Communal toilets at each level</p>
+                  <br />
+                  <p>
+                    Gender segregated by levels, guys will generally take the
+                    lower levels of each block.
+                  </p>
+                  <p>All levels are serviced by lifts.</p>
+                </div>
+              </div>
+              <!-- end of accordion body -->
+            </div>
+            <!-- end of accordion item -->
+
+            <div
+              class="faq-accordion__item js-accordion-item uk-margin-small-top"
+            >
+              <div class="faq-accordion-header js-accordion-header">
+                <h3>02. Common Facilities</h3>
+              </div>
+              <div class="faq-accordion-body js-accordion-body">
+                <div class="faq-accordion-body__contents">
+                  <p>Residential Blocks&colon;</p>
+                  <ul>
+                    <li>Kitchenette &amp; Pantry</li>
+                    <li>Laundry Room</li>
+                    <li>TV Lounge</li>
+                  </ul>
+
+                  <p>Communal Block&colon;</p>
+                  <ul>
+                    <li>Reading/Study Room</li>
+                    <li>Function &#40;Communal&#41; Hall</li>
+                    <li>Music Room</li>
+                    <li>Dance Studio</li>
+                    <li>Seminar Room</li>
+                    <li>Cultural &amp; Recreation rooms</li>
+                    <li>Exercise Gym</li>
+                    <li>Mailboxes</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- end of accordion body -->
+            </div>
+            <!-- end of accordion item -->
+
+            <div
+              class="faq-accordion__item js-accordion-item uk-margin-small-top"
+            >
+              <div class="faq-accordion-header js-accordion-header">
+                <h3>03. Miscellaneous</h3>
+              </div>
+              <div class="faq-accordion-body js-accordion-body">
+                <div class="faq-accordion-body__contents">
+                  <p>Hall 3 General Office</p>
+                  <ul>
+                    <li>For setting of administrative and logistic affairs</li>
+                    <li>
+                      Open from Mondays to Fridays, 8&colon;30am - 5&colon;30pm
+                    </li>
+                  </ul>
+
+                  <p>Security Counter</p>
+                  <ul>
+                    <li>Campus Security is available all day</li>
+                    <li>6790 4777 &#40;24hrs hotline&#41;</li>
+                  </ul>
+
+                  <p>Hall Council Room</p>
+                </div>
+              </div>
+              <!-- end of accordion body -->
+            </div>
+            <!-- end of accordion item -->
+
+            <div
+              class="faq-accordion__item js-accordion-item uk-margin-small-top"
+            >
+              <div class="faq-accordion-header js-accordion-header">
+                <h3>04. Food/Canteens</h3>
+              </div>
+              <div class="faq-accordion-body js-accordion-body">
+                <div class="faq-accordion-body__contents">
+                  <p>Here's a list of canteens near Hall 3&colon;</p>
+                  <ul>
+                    <li>Canteen 16</li>
+                    <li>13 Bites Bistro &#40;Hall 13&#41;</li>
+                    <li>Canteen 14</li>
+                    <li>NIE Canteen</li>
+                  </ul>
+
+                  <p>Some North Spine food outlets&colon;</p>
+                  <ul>
+                    <li>Koufu</li>
+                    <li>McDonald&apos;s</li>
+                    <li>Subway</li>
+                    <li>Popeye&apos;s</li>
+                    <li>Starbucks Coffee</li>
+                  </ul>
+
+                  <p>
+                    For more detailed information,<br />
+                    click
+                    <a
+                      href="https://www.ntu.edu.sg/life-at-ntu/leisure-and-dining/general-directory?locationTypes=all&locationCategories=all&page=1#Content_C001_Col00"
+                      target="_blank"
+                      >here.</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <!-- end of accordion body -->
+            </div>
+            <!-- end of accordion item -->
+          </div>
+          <!-- end of accordions -->
+        </div>
+      </div>
     </div>
   </section>
 </article>
@@ -297,20 +445,20 @@
     <div class="uk-container">
       <div class="uk-grid">
         <div
-          class="uk-width-1-2 uk-flex uk-flex-middle"
+          class="uk-width-1-2@s uk-flex uk-flex-middle"
           uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false"
         >
           <img
-            src="{{"images/about_page/brief_history.jpg" | relURL}}"
+            src="{{ "images/about_page/brief_history.jpg" | relURL }}"
             alt="Yellow Tee Day Image"
             class="shadow-image"
           />
         </div>
-        <div class="uk-width-1-2 uk-flex uk-flex-middle">
+        <div class="uk-width-1-2@s uk-flex uk-flex-middle">
           <div>
             <div class="uk-text-right">
               <h2
-                class="section-heading uk-text-right"
+                class="section-heading uk-text-right uk-margin-medium-top"
                 uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false"
               >
                 A Brief History
@@ -348,7 +496,7 @@
   <section id="crest-and-logo" class="uk-margin-large-top">
     <div class="uk-container">
       <div class="uk-grid">
-        <div class="uk-width-1-2 uk-flex uk-flex-middle">
+        <div class="uk-width-1-2@s uk-flex uk-flex-middle">
           <div>
             <h2
               class="section-heading"
@@ -382,14 +530,19 @@
             </p>
           </div>
         </div>
-        <div class="uk-width-1-2">
+        <div class="uk-width-1-2@s">
           <div
             uk-lightbox
             uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 100"
+            class="uk-height-1-1"
           >
-            <a class="uk-flex uk-flex-center uk-flex-middle" href="{{"images/h3_remastered_dp.png" | relURL}}" data-alt="Image">
+            <a
+              class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1"
+              href="{{ "images/h3_remastered_dp.png" | relURL }}"
+              data-alt="Image"
+            >
               <img
-                src="{{"images/h3_remastered_dp.png" | relURL}}"
+                src="{{ "images/h3_remastered_dp.png" | relURL }}"
                 alt="Hall 3 Logo Colored"
                 class="modern-logo"
               />
@@ -407,11 +560,11 @@
           <li class="uk-flex uk-flex-center uk-flex-middle">
             <div uk-lightbox>
               <a
-                href="{{"images/about_page/old_Logos/AY_16_17.jpg" | relURL}}"
+                href="{{ "images/about_page/old_Logos/AY_16_17.jpg" | relURL }}"
                 data-caption="Academic Year 2016-2017"
               >
                 <img
-                  src="{{"images/about_page/old_Logos/AY_16_17.jpg" | relURL}}"
+                  src="{{ "images/about_page/old_Logos/AY_16_17.jpg" | relURL }}"
                   alt="Hall 3 Logo AY 16/17"
                 />
               </a>
@@ -421,11 +574,11 @@
           <li class="uk-flex uk-flex-center uk-flex-middle">
             <div uk-lightbox>
               <a
-                href="{{"images/about_page/old_Logos/AY_17_18.jpeg" | relURL}}"
+                href="{{ "images/about_page/old_Logos/AY_17_18.jpeg" | relURL }}"
                 data-caption="Academic Year 2017-2018"
               >
                 <img
-                  src="{{"images/about_page/old_Logos/AY_17_18.jpeg" | relURL}}"
+                  src="{{ "images/about_page/old_Logos/AY_17_18.jpeg" | relURL }}"
                   alt="Hall 3 Logo AY 17/18"
                 />
               </a>
@@ -435,11 +588,11 @@
           <li class="uk-flex uk-flex-center uk-flex-middle">
             <div uk-lightbox>
               <a
-                href="{{"images/about_page/old_Logos/AY_18_19.jpeg" | relURL}}"
+                href="{{ "images/about_page/old_Logos/AY_18_19.jpeg" | relURL }}"
                 data-caption="Academic Year 2018-2019"
               >
                 <img
-                  src="{{"images/about_page/old_Logos/AY_18_19.jpeg" | relURL}}"
+                  src="{{ "images/about_page/old_Logos/AY_18_19.jpeg" | relURL }}"
                   alt="Hall 3 Logo AY 18/19"
                 />
               </a>
@@ -449,11 +602,11 @@
           <li class="uk-flex uk-flex-center uk-flex-middle">
             <div uk-lightbox>
               <a
-                href="{{"images/about_page/old_Logos/AY_19_20.jpeg" | relURL}}"
+                href="{{ "images/about_page/old_Logos/AY_19_20.jpeg" | relURL }}"
                 data-caption="Academic Year 2019-2020"
               >
                 <img
-                  src="{{"images/about_page/old_Logos/AY_19_20.jpeg" | relURL}}"
+                  src="{{ "images/about_page/old_Logos/AY_19_20.jpeg" | relURL }}"
                   alt="Hall 3 Logo AY 19/20"
                 />
               </a>
@@ -463,12 +616,12 @@
           <li class="uk-flex uk-flex-center uk-flex-middle">
             <div uk-lightbox>
               <a
-                href="{{"images/about_page/old_Logos/Recent_logo.png" | relURL}}"
+                href="{{ "images/about_page/old_Logos/Recent_logo.png" | relURL }}"
                 data-caption="The previously used Hall 3 Logo"
               >
                 <img
-                  src="{{"images/about_page/old_Logos/Recent_logo.png" | relURL}}"
-                  alt="Hall 3&apos;s Most Recent Logo"
+                  src="{{ "images/about_page/old_Logos/Recent_logo.png" | relURL }}"
+                  alt="Hall 3's Most Recent Logo"
                 />
               </a>
             </div>

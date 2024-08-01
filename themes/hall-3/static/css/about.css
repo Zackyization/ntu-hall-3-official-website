@@ -35,6 +35,10 @@
   font-weight: 400;
 }
 
+#facility-info-items {
+  max-width: 849px;
+}
+
 /* ─── Brief History Section Stylings ─────────────────────────────────────── */
 #brief-history p {
   margin-bottom: 12px;
@@ -70,4 +74,42 @@
 
 .uk-dotnav > .uk-active > * {
   background-color: var(--dark-color);
+}
+
+/* Tablet Stylings */
+@media (max-width: 960px) {
+  /* ─── Facilities Accordion Tablet Stylings ───────────────────────── */
+  .faq-accordion-header {
+    background: var(--secondary-color)!important;
+    color: var(--dark-color)!important;
+  }
+
+  .faq-accordion-header h3 {
+    color: var(--dark-color)!important;
+  }
+
+  .faq-accordion-body {
+    background: #dbd6b1!important;
+    color: var(--dark-color)!important;
+  }
+
+  .faq-accordion a {
+    color: var(--hall-3-blue)!important;
+  }
+}
+
+/* Mobile stylings */
+@media (max-width: 640px) {
+  /* ─── Facilities Brief Mobile Stylings ──────────────────────────── */
+  #facilities-info ul li {
+    width: 280px;
+  }
+
+  #facilities-info ul li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  #facility-info-items {
+    padding: 0;
+  }
 }
