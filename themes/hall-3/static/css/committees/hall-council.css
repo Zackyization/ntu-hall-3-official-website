@@ -1,11 +1,18 @@
 /* ─── Hall Council Content Styling ───────────────────────────────────────── */
 
 #hero h2 {
-    font-size: 24px!important;
+  font-size: 24px !important;
 }
 
 #hero strong {
-    font-size: 36px;
-    font-weight: 700;
-    margin-top: 12px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+@media (max-width: 640px) {
+  /* ─── Council Gallery Mobile Styles ──────────────────────────────── */
+  .past-councils > div {
+    width: 50% !important;
+  }
 }
