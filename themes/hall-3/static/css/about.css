@@ -80,21 +80,21 @@
 @media (max-width: 960px) {
   /* ─── Facilities Accordion Tablet Stylings ───────────────────────── */
   .faq-accordion-header {
-    background: var(--secondary-color)!important;
-    color: var(--dark-color)!important;
+    background: var(--secondary-color) !important;
+    color: var(--dark-color) !important;
   }
 
   .faq-accordion-header h3 {
-    color: var(--dark-color)!important;
+    color: var(--dark-color) !important;
   }
 
   .faq-accordion-body {
-    background: #dbd6b1!important;
-    color: var(--dark-color)!important;
+    background: #dbd6b1 !important;
+    color: var(--dark-color) !important;
   }
 
   .faq-accordion a {
-    color: var(--hall-3-blue)!important;
+    color: var(--hall-3-blue) !important;
   }
 }
 
