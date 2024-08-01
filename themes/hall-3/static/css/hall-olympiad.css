@@ -2,10 +2,12 @@
   /* TODO: In the tablet/mobile views, use calc to make the responsive sizes for the committee items */
   --ho-item-image-width: 264px;
   --ho-item-image-height: 277px;
+  --poster-image-width: 588px;
+  --poster-image-height: 640px;
 }
 
 .message-from-zj {
-  text-transform: lowercase!important;
+  text-transform: lowercase !important;
   color: #4d4d4d;
 }
 
@@ -129,8 +131,8 @@ ul.ho-items {
 }
 
 .poster {
-  width: 588px;
-  height: 640px;
+  width: var(--poster-image-width);
+  height: var(--poster-image-height);
   background-color: gray;
 }
 
@@ -268,7 +270,6 @@ ul.ho-items {
 
 #i-chess .image::before {
   background-image: url(../images/hall-olympiad/recreational/i-chess/thumbnail.JPG);
-
 }
 
 #c-chess .image::before {
@@ -319,4 +320,20 @@ ul.ho-items {
 
 #vipers .image::before {
   background-image: url(../images/hall-olympiad/cultural/vipers/thumbnail.jpg);
+}
+
+/* Tablet Stylings */
+@media (max-width: 960px) {
+  .poster {
+    width: calc(var(--poster-image-width) / 1.7);
+    height: calc(var(--poster-image-height) / 1.7);
+  }
+}
+
+/* Mobile Stylings */
+@media (max-width: 640px) {
+  .posters {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
