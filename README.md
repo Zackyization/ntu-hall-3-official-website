@@ -8,7 +8,7 @@
 [![hugo](https://user-images.githubusercontent.com/43764894/223559747-e9d7f19d-91bf-46a9-a0cb-8d6a40d3cfa3.png)](https://ntl.fyi/3P9w1mr)
 
 # NTU Hall 3 Official Website
-This is the repository containing the source code for the official NTU Hall 3 website which can be found [here.](https://hall3.netlify.app) This project is powered by Hugo and Netlify. Let this website be Zee Jay's legacy that he left for Hall 3, heh.
+This is the repository containing the source code for the official NTU Hall 3 website which can be found [here.](https://hall3.netlify.app) This project is powered by Hugo and Netlify. This project also marks the last thing official project Zee Jay has done for Hall 3. Thanks for the 2 years of fond memories.
 
 
 ## Table of Contents:
