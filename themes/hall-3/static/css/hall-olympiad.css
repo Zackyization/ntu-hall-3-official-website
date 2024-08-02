@@ -276,6 +276,10 @@ ul.ho-items {
   background-image: url(../images/hall-olympiad/recreational/c-chess/thumbnail.JPG);
 }
 
+#contract-bridge .image::before {
+  background-image: url(../images/hall-olympiad/recreational/contract-bridge/thumbnail.jpg);
+}
+
 #snooker .image::before {
   background-image: url(../images/hall-olympiad/recreational/snooker/thumbnail.JPG);
 }
