@@ -12,10 +12,22 @@
     font-size: 6rem;
 }
 
-#zj-hippo-dog path {
+#zj-hippo-dog path,
+.hippo-dogs-left path,
+.hippo-dogs-right path {
     transition: stroke 0.2s ease-in-out;
 }
 
-#zj-hippo-dog:hover path{
+#zj-hippo-dog:hover path,
+.hippo-dogs-left:hover path,
+.hippo-dogs-right:hover path {
     stroke: var(--secondary-color);
+}
+
+.hippo-dogs-left {
+    margin-right: 24px;
+}
+
+.hippo-dogs-right {
+    margin-left: 24px;
 }
