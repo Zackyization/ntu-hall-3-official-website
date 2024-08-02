@@ -1,29 +1,20 @@
+<div align="center">
+  <a href="https://hall3.netlify.app">
+    <img width="20%" src="https://hall3.netlify.app/images/h3_remastered_dp.png" alt="Hall 3 Logo">
+  </a>
+</div>
+
+
 [![hugo](https://user-images.githubusercontent.com/43764894/223559747-e9d7f19d-91bf-46a9-a0cb-8d6a40d3cfa3.png)](https://ntl.fyi/3P9w1mr)
 
 # NTU Hall 3 Official Website
-This is the repository containing the source code for the official NTU Hall 3 website which can be found [here.](https://hall3.netlify.app) 
+This is the repository containing the source code for the official NTU Hall 3 website which can be found [here.](https://hall3.netlify.app) This project is powered by Hugo and Netlify. Let this website be Zee Jay's legacy that he left for Hall 3, heh.
 
 
 ## Table of Contents:
-
-- [Quick Setup + Deploy Option](#quick-setup--deploy-option)
 - [Regular Setup](#regular-setup)
   - [Cloning + Install Packages](#1-cloning--install-packages)
   - [Deploying](#2-deploying)
-- [Styling](#styling)
-  - [Notes on Styling](#notes-on-styling)
-- [Hugo + Netlify Resources](#hugo--netlify-resources)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
-- [Want to learn more?](#want-to-learn-more)
-
-## Quick Setup + Deploy Option
-
-Click this button and it will help you create a new repo, create a new Netlify project, and deploy!
-
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/hugo-quickstart)
 
 ## Regular Setup
 
@@ -34,7 +25,7 @@ Click this button and it will help you create a new repo, create a new Netlify p
     - Click the 'Use this template' button at the top of the page
     - Or via the command line `git clone https://github.com/netlify-templates/hugo-quickstart`
 
- - Start the Hugo sever & check it out:
+ - Start the Hugo server & check it out:
 
    - `hugo server -D`
    - go to [http://localhost:1313/](http://localhost:1313/)
@@ -54,48 +45,4 @@ Click this button and it will help you create a new repo, create a new Netlify p
     
   - If you want to utilize continuous deployment through GitHub webhooks, run the Netlify command `netlify init` to create a new project based on your repo or `netlify link` to connect your repo to an existing project
 
-## Styling
-
-We've added some modern styling to this template using Sass within an external stylesheet, this will allow you to easily remove our styling and add in your own. 
-
-If you decide that you want to keep our styling you can review our style notes below. 
-
-### Notes on Styling
-
-The variables below give you the ability to change the gradient colors of the blobs and are interpolated into the URL string of the background-img within the body. 
-
-```css
-// Controls the blob blur gradient colors within the main tag's svg
---top-right-blur-1: #2ebc92;
---top-right-blur-2: #ecbb50;
---bttm-left-blur-1: #ff3e89;
---bttm-left-blur-2: #0095cc;
-```
-
-
-## Hugo + Netlify Resources
-
-Here are some resources to help you on your Hugo + Netlify coding fun!
-
-- [Hugo on Netlify Integration Page](https://ntl.fyi/3P9w1mr)
-
-
-Hope this template helps :) Happy coding 👩🏻‍💻!
-
 ---
-
-## Testing
-
-### Included Default Testing
-
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
-
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
-- [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
-- [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
-
-If your team is not interested in this tooling, you can remove them with ease!
-
-### Removing Renovate
-
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
