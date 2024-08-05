@@ -1,8 +1,14 @@
-<meta name="google-site-verification" content="PQUwGTShepzZFnn7AfDSxiIPhDgKclvd7FUbcOTUka4" />
-<title>{{.Title}} &vert; Hall 3</title>
+<meta
+  name="google-site-verification"
+  content="PQUwGTShepzZFnn7AfDSxiIPhDgKclvd7FUbcOTUka4"
+/>
+<title>{{ .Title }} &vert; Hall 3</title>
 
-<link rel="shortcut icon" href="{{ "icons/favicon.svg" | relURL }}"
-type="image/svg+xml" />
+<link
+  rel="shortcut icon"
+  href="{{ "icons/favicon.svg" | relURL }}"
+  type="image/svg+xml"
+/>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,7 +37,7 @@ type="image/svg+xml" />
 
 <!-- Conditionally include page-specific CSS -->
 {{ with .Params.css }}
-  {{range .}}
-<link rel="stylesheet" href="{{ . | relURL }}" />
+  {{ range . }}
+    <link rel="stylesheet" href="{{ . | relURL }}" />
   {{ end }}
 {{ end }}

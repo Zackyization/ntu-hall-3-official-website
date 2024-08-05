@@ -1,99 +1,111 @@
 <article>
-    <section id="committee-hero" class="hero-section">
-      <div class="uk-container">
-        <div class="uk-flex uk-flex-center">
-          <img
-            src="{{"images/page_hero_images/committee_page_image.png" | relURL}}"
-            alt="A faint image of the 41st Hall Council Committee."
-            uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 30"
-          />
-        </div>
-        <div class="section-content uk-text-center" uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 180">
-          <h1 class="page-title">Committees</h1>
-          <p>
-            The current governing body of Hall 3 is the 41st Hall
-            Council.<br />
-            Hall 3 consists of several ad-hoc committees.
-          </p>
-          <br />
-          <p>Take a look!</p>
-        </div>
+  <section id="committee-hero" class="hero-section">
+    <div class="uk-container">
+      <div class="uk-flex uk-flex-center">
+        <img
+          src="{{ "images/page_hero_images/committee_page_image.png" | relURL }}"
+          alt="A faint image of the 41st Hall Council Committee."
+          uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 30"
+        />
       </div>
-    </section>
-  </article>
+      <div
+        class="section-content uk-text-center"
+        uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 180"
+      >
+        <h1 class="page-title">Committees</h1>
+        <p>
+          The current governing body of Hall 3 is the 41st Hall Council.<br />
+          Hall 3 consists of several ad-hoc committees.
+        </p>
+        <br />
+        <p>Take a look!</p>
+      </div>
+    </div>
+  </section>
+</article>
 
-  <article>
-    <section id="committee-list" class="uk-margin-large-top">
-      <div class="uk-container">
-        <ul class="committees">
-          <div class="grid-container">
-            <div class="uk-flex uk-flex-middle mobile-flex">
-              <li
-                id="ENC"
-                class="committee-item"
-                uk-scrollspy="cls:uk-animation-slide-bottom; repeat: false; delay: 180"
+<article>
+  <section id="committee-list" class="uk-margin-large-top">
+    <div class="uk-container">
+      <ul class="committees">
+        <div class="grid-container">
+          <div class="uk-flex uk-flex-middle mobile-flex">
+            <li
+              id="ENC"
+              class="committee-item"
+              uk-scrollspy="cls:uk-animation-slide-bottom; repeat: false; delay: 180"
+            >
+              <a
+                href="{{ "committees/elite-night-cycling/" | relURL }}"
+                title="Elite Night Cycling"
               >
-                <a href="{{"committees/elite-night-cycling/" | relURL}}" title="Elite Night Cycling">
-                  <div class="image-container">
-                    <div class="caption">Elite Night Cycling</div>
-                    <div class="caption-background"></div>
-                    <div class="image"></div>
-                    <div class="image-background"></div>
-                  </div>
-                </a>
-              </li>
-            </div>
-            <div class="uk-flex uk-flex-middle uk-flex-wrap">
-              <li
-                id="Hall-Council"
-                class="committee-item"
-                uk-scrollspy="cls:uk-animation-slide-bottom; repeat: false"
-              >
-                <a href="{{"committees/hall-council/" | relURL}}" title="Hall Council">
-                  <div class="image-container">
-                    <div class="caption">Hall Council</div>
-                    <div class="caption-background"></div>
-                    <div class="image"></div>
-                    <div class="image-background"></div>
-                  </div>
-                </a>
-              </li>
-
-              <li
-                id="FOP"
-                class="committee-item uk-margin-medium-top"
-                uk-scrollspy="cls:uk-animation-slide-bottom; repeat: false; delay: 130"
-              >
-                <a href="{{"committees/freshmen-orientation-programme/" | relURL}}" title="Freshmen Orientation Programme">
-                  <div class="image-container">
-                    <div class="caption">
-                      Freshmen Orientation<br />Programme
-                    </div>
-                    <div class="caption-background"></div>
-                    <div class="image"></div>
-                    <div class="image-background"></div>
-                  </div>
-                </a>
-              </li>
-            </div>
-            <div class="uk-flex uk-flex-middle mobile-flex">
-              <li
-                id="DnD"
-                class="committee-item"
-                uk-scrollspy="cls:uk-animation-slide-bottom; repeat: false; delay: 85"
-              >
-                <a href="{{"committees/dinner-and-dance/" | relURL}}" title="Dinner &amp; Dance">
-                  <div class="image-container">
-                    <div class="caption">Dinner &amp; Dance</div>
-                    <div class="caption-background"></div>
-                    <div class="image"></div>
-                    <div class="image-background"></div>
-                  </div>
-                </a>
-              </li>
-            </div>
+                <div class="image-container">
+                  <div class="caption">Elite Night Cycling</div>
+                  <div class="caption-background"></div>
+                  <div class="image"></div>
+                  <div class="image-background"></div>
+                </div>
+              </a>
+            </li>
           </div>
-        </ul>
-      </div>
-    </section>
-  </article>
+          <div class="uk-flex uk-flex-middle uk-flex-wrap">
+            <li
+              id="Hall-Council"
+              class="committee-item"
+              uk-scrollspy="cls:uk-animation-slide-bottom; repeat: false"
+            >
+              <a
+                href="{{ "committees/hall-council/" | relURL }}"
+                title="Hall Council"
+              >
+                <div class="image-container">
+                  <div class="caption">Hall Council</div>
+                  <div class="caption-background"></div>
+                  <div class="image"></div>
+                  <div class="image-background"></div>
+                </div>
+              </a>
+            </li>
+
+            <li
+              id="FOP"
+              class="committee-item uk-margin-medium-top"
+              uk-scrollspy="cls:uk-animation-slide-bottom; repeat: false; delay: 130"
+            >
+              <a
+                href="{{ "committees/freshmen-orientation-programme/" | relURL }}"
+                title="Freshmen Orientation Programme"
+              >
+                <div class="image-container">
+                  <div class="caption">Freshmen Orientation<br />Programme</div>
+                  <div class="caption-background"></div>
+                  <div class="image"></div>
+                  <div class="image-background"></div>
+                </div>
+              </a>
+            </li>
+          </div>
+          <div class="uk-flex uk-flex-middle mobile-flex">
+            <li
+              id="DnD"
+              class="committee-item"
+              uk-scrollspy="cls:uk-animation-slide-bottom; repeat: false; delay: 85"
+            >
+              <a
+                href="{{ "committees/dinner-and-dance/" | relURL }}"
+                title="Dinner &amp; Dance"
+              >
+                <div class="image-container">
+                  <div class="caption">Dinner &amp; Dance</div>
+                  <div class="caption-background"></div>
+                  <div class="image"></div>
+                  <div class="image-background"></div>
+                </div>
+              </a>
+            </li>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </section>
+</article>
