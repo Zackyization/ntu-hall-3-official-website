@@ -1,0 +1,11 @@
+/* TEAM */
+Developer: Zildjian Garcia
+Contact: zackyization@gmail.com
+Website: https://www.linkedin.com/in/zildjian-aquino-garcia
+
+/* THANKS */
+Thank you to those who were part of my freshmen and sophomore years of my university journey. Especially to those who I met in Hall 3 itself, for giving me memories and experiences that I will treasure for life. Making this website was a blast and gave me my first real chance to use my talents to create something for the masses out of pure passion.
+
+/* SITE */
+Last update: 2024-05-08
+Standards: HTML5, CSS3
