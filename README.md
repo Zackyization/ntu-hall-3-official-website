@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9fd1343e-fb58-4850-b494-6ae5f50e944d/deploy-status)](https://app.netlify.com/sites/hall3/deploys)
 <div align="center">
   <a href="https://hall3.netlify.app">
     <img width="20%" src="https://hall3.netlify.app/images/h3_remastered_dp.png" alt="Hall 3 Logo">
