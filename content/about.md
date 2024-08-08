@@ -1,5 +1,6 @@
 ---
 title: "About"
+metaDescription: "Get to know about Hall 3's history, facilities and more."
 css: 
     - "css/about.css"
     - "components/vertical-accordion/vertical-accordion.css"

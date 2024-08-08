@@ -2,8 +2,13 @@
   name="google-site-verification"
   content="PQUwGTShepzZFnn7AfDSxiIPhDgKclvd7FUbcOTUka4"
 />
-<title>{{ .Title }} &vert; Hall 3</title>
 
+<title>{{ .Title }} &vert; Hall 3</title>
+{{ if .Params.metaDescription }}
+<meta name="description" content="{{ .Params.metaDescription }}">
+{{ else }}
+<meta name="description" content="The official website for Hall of Residence 3, Nanyang Technologcial University, Singapore. Get to know about Hall 3 and our various committees, sports teams, recreational teams and cultural groups!">
+{{ end }}
 <link
   rel="icon"
   href="{{ "icons/favicon.svg" | relURL }}"
