@@ -4,6 +4,8 @@ metaDescription: "Get in touch with us through any one of the channels listed on
 css: 
     - "css/contact.css"
 js: []
+metaImage:
+    - "meta_contact_page.png"
 ---
 
 {{< contact-content >}}

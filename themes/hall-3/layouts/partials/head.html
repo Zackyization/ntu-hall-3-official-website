@@ -1,14 +1,66 @@
-<meta
-  name="google-site-verification"
-  content="PQUwGTShepzZFnn7AfDSxiIPhDgKclvd7FUbcOTUka4"
-/>
-
 <title>{{ .Title }} &vert; Hall 3</title>
 {{ if .Params.metaDescription }}
-<meta name="description" content="{{ .Params.metaDescription }}">
+  <meta name="description" content="{{ .Params.metaDescription }}" />
 {{ else }}
-<meta name="description" content="The official website for Hall of Residence 3, Nanyang Technologcial University, Singapore. Get to know about Hall 3 and our various committees, sports teams, recreational teams and cultural groups!">
+  <meta
+    name="description"
+    content="The official website for Hall of Residence 3, Nanyang Technologcial University, Singapore. Get to know about Hall 3 and our various committees, sports teams, recreational teams and cultural groups!"
+  />
 {{ end }}
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hall3.netlify.app/" />
+<meta property="og:title" content="{{ .Title }} | Hall 3" />
+{{ if .Params.metaDescription }}
+  <meta property="og:description" content="{{ .Params.metaDescription }}" />
+{{ else }}
+  <meta
+    property="og:description"
+    content="The official website for Hall of Residence 3, Nanyang Technologcial University, Singapore. Get to know about Hall 3 and our various committees, sports teams, recreational teams and cultural groups!"
+  />
+{{ end }}
+{{ if .Params.metaImage }}
+  <meta
+    property="og:image"
+    content="{{ "images/meta/" | relURL }}{{ .Params.metaImage }}"
+  />
+{{ else }}
+  <meta
+    property="og:image"
+    content="{{ "images/meta/meta_home_page.png" | relURL }}"
+  />
+{{ end }}
+
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://hall3.netlify.app/" />
+{{ if .Params.metaDescription }}
+  <meta
+    property="twitter:description"
+    content="{{ .Params.metaDescription }}"
+  />
+{{ else }}
+  <meta
+    property="twitter:description"
+    content="The official website for Hall of Residence 3, Nanyang Technologcial University, Singapore. Get to know about Hall 3 and our various committees, sports teams, recreational teams and cultural groups!"
+  />
+{{ end }}
+<meta property="twitter:title" content="{{ .Title }} | Hall 3" />
+{{ if .Params.metaImage }}
+  <meta
+    property="twitter:image"
+    content="{{ "images/meta/" | relURL }}{{ .Params.metaImage }}"
+  />
+{{ else }}
+  <meta
+    property="twitter:image"
+    content="{{ "images/meta/meta_home_page.png" | relURL }}"
+  />
+{{ end }}
+
 <link
   rel="icon"
   href="{{ "icons/favicon.svg" | relURL }}"
@@ -18,6 +70,11 @@
   rel="shortcut icon"
   href="{{ "icons/favicon.svg" | relURL }}"
   type="image/svg+xml"
+/>
+
+<meta
+  name="google-site-verification"
+  content="PQUwGTShepzZFnn7AfDSxiIPhDgKclvd7FUbcOTUka4"
 />
 
 <!-- Google Fonts -->

@@ -8,6 +8,8 @@ css:
 js: 
     - "https://code.jquery.com/jquery-3.7.1.min.js"
     - "components/faq-accordion/faq-accordion.js"
+metaImage:
+    - "meta_faqs_page.png"
 ---
 
 {{< faqs-content >}}

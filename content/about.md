@@ -12,6 +12,8 @@ js:
     - "components/faq-accordion/faq-accordion.js"
     - "js/about/rentalRatesForm.js"
     - "js/about/accordionOnCommand.js"
+metaImage:
+    - "meta_about_page.png"
 ---
 
 {{< about-content >}}
