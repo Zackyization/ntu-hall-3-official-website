@@ -5,8 +5,7 @@ layout: "single"
 css: 
     - "css/hall-olympiad.css"
 js: []
-metaImage:
-    - "meta_hall_olympiad_page.png"
+metaImage: "meta_hall_olympiad_page.png"
 ---
 
 {{< hall-olympiad-content >}}
