@@ -7,8 +7,17 @@
     content="The official website for Hall of Residence 3, Nanyang Technologcial University, Singapore. Get to know about Hall 3 and our various committees, sports teams, recreational teams and cultural groups!"
   />
 {{ end }}
-
-
+{{ if .Params.metaTags }}
+  <meta
+    name="keywords"
+    content="NTU, HALL 3, NANYANG, TECHNOLOGICAL, UNIVERSITY, HALL, RESIDENCE, 3, THREE, NTU On-Campus Housing, Nanyang Walk Residence, Student Living NTU, NTU Dormitory, {{ .Params.metaTags }}"
+  />
+{{ else }}
+  <meta
+    name="keywords"
+    content="NTU, HALL 3, NANYANG, TECHNOLOGICAL, UNIVERSITY, HALL, RESIDENCE, 3, THREE, NTU On-Campus Housing, Nanyang Walk Residence, Student Living NTU, NTU Dormitory"
+  />
+{{ end }}
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://hall3.netlify.app/" />
@@ -60,6 +69,7 @@
     content="{{ "images/meta/meta_home_page.png" | relURL }}"
   />
 {{ end }}
+
 
 <link
   rel="icon"
