@@ -3,6 +3,7 @@
     "cypress": "^10.3.1"
   },
   "devDependencies": {
+    "@netlify/plugin-lighthouse": "^6.0.0",
     "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15"
   }
