@@ -1,18 +1,53 @@
+# when using the default proxy server port (NOTE: Only used for local development!)
+# local_backend: true
+
+# backend:
+  # name: git-gateway
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-media_folder: static/img
-public_folder: /img
+  name: github
+  repo: Zackyization/ntu-hall-3-official-website
+  branch: main
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+site_url: https://hall3.netlify.app
+logo_url: "/images/h3_remastered_dp.png"
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+# TODO:: Figure out this SvelteCMS shit
+  - name: "about"
+    label: "About"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/about.md"
+        preview_path: about
+        fields:
+          - label: "Hero Section Section"
+            name: "aboutHero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Content", name: "content", widget: "markdown" }
+          - label: "Brief History Section"
+            name: "briefHistory"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Content", name: "content", widget: "markdown" }
+  - name: "committees"
+    label: "Committees"
+    folder: "content/committees"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
+    slug: "{{slug}}"
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "hall-olympiad"
+    label: "Hall Olympiad"
+    folder: "content/hall-olympiad"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

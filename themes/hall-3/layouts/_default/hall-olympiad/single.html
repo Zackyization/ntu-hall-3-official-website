@@ -1,95 +1,180 @@
 {{ define "main" }}
-  <article role="article">
-    <section>
-      <div class="uk-container">
-        <div uk-grid>
-          <div class="uk-width-1-2@l">
-            <div class="uk-flex uk-flex-center uk-flex-column uk-height-1-1">
-              <h1
-                uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 60"
-              >
-                {{ .Title }}
-              </h1>
-              <p
-                uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 100"
-                class="uk-text-justify uk-margin-medium-top"
-              >
-                {{ .Description | safeHTML }}
-              </p>
-            </div>
-          </div>
-          <div class="uk-width-1-2@l">
-            <!-- Dynamically load the title, caption and images -->
-            {{ $baseFileName := .File.BaseFileName }}
-            {{ $normalizedPath := replace .File.Path "\\" "/" }} <!-- Normalize path -->
-            {{ $sections := split $normalizedPath "/" }}
-
-            <!-- Get the base file name of the current file e.g. badminton -->
-            {{ $baseCategory := index $sections 0 }}
-            <!-- Get the category under hall-olympiad e.g. sports, recreational or cultural -->
-            {{ $subCategory := index $sections 1 }}
-
-            {{ $extensions := slice "jpg" "JPG" "png" "PNG" }}
-            {{ $imgPath := "" }}
-            {{ $imgSrc := "" }}
-            {{ $prefix := "static/" }}
-
-            {{ range $extensions }}
-              {{ $path := printf "static/images/%s/%s/%s/thumbnail.%s" $baseCategory $subCategory $baseFileName . }}
-              {{ if and (eq $imgPath "") (fileExists $path) }}
-                {{ $imgPath = $path }}
-                {{ $imgSrc = substr $imgPath (len $prefix) }}
-              {{ end }}
-            {{ end }}
-
-            {{ if $imgSrc }}
-              <div
-                uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 160"
-                class="uk-flex uk-flex-center uk-flex-column uk-height-1-1"
-              >
-                <img src="{{ $imgSrc | relURL }}" alt="Thumbnail" />
-              </div>
-            {{ else }}
+  <main role="main">
+    <article role="article">
+      <section>
+        <div class="uk-container">
+          <div uk-grid>
+            <div class="uk-width-1-2@l">
               <div class="uk-flex uk-flex-center uk-flex-column uk-height-1-1">
-                <p>No thumbnail available.</p>
+                <h1
+                  uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 60"
+                >
+                  {{ .Title }}
+                </h1>
+                <p
+                  uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 100"
+                  class="uk-text-justify uk-margin-medium-top"
+                >
+                  {{ .Page.Params.Description | safeHTML }}
+                </p>
+
+                {{ $hasSocialMedia := false }}
+                {{ range $key, $value := .Page.Params.socialMedia }}
+                  {{ if $value }}
+                    {{ $hasSocialMedia = true }}
+                    {{ break }}
+                  {{ end }}
+                {{ end }}
+
+                {{ if $hasSocialMedia }}
+                  <ul class="uk-list social-media">
+                    {{ if .Page.Params.socialMedia.instagram }}
+                      <li
+                        class="social-media-item"
+                        uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 30"
+                      >
+                        <a
+                          href="https://www.instagram.com/{{ .Page.Params.socialMedia.instagram }}/"
+                          target="_blank"
+                          title="{{ .Title }} Instagram Page"
+                        >
+                          <div class="grid-container">
+                            <div class="uk-flex uk-flex-center uk-flex-middle">
+                              <!-- Instagram Icon -->
+                              <svg
+                                width="45"
+                                height="45"
+                                viewBox="0 0 21 21"
+                                fill="#2f2f2f"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M5.97964 0H14.6398C17.9389 0 20.6194 2.68053 20.6194 5.97964V14.6398C20.6194 16.2257 19.9894 17.7466 18.868 18.868C17.7466 19.9894 16.2257 20.6194 14.6398 20.6194H5.97964C2.68053 20.6194 0 17.9389 0 14.6398V5.97964C0 4.39374 0.629996 2.87279 1.7514 1.7514C2.87279 0.629996 4.39374 0 5.97964 0ZM5.77344 2.06194C4.78909 2.06194 3.84506 2.45298 3.14902 3.14902C2.45298 3.84506 2.06194 4.78909 2.06194 5.77344V14.846C2.06194 16.8976 3.72181 18.5575 5.77344 18.5575H14.846C15.8303 18.5575 16.7744 18.1665 17.4704 17.4704C18.1665 16.7744 18.5575 15.8303 18.5575 14.846V5.77344C18.5575 3.72181 16.8976 2.06194 14.846 2.06194H5.77344ZM15.7223 3.6084C16.0641 3.6084 16.3919 3.74418 16.6336 3.98586C16.8753 4.22754 17.011 4.55533 17.011 4.89712C17.011 5.2389 16.8753 5.56669 16.6336 5.80838C16.3919 6.05006 16.0641 6.18583 15.7223 6.18583C15.3805 6.18583 15.0527 6.05006 14.8111 5.80838C14.5694 5.56669 14.4336 5.2389 14.4336 4.89712C14.4336 4.55533 14.5694 4.22754 14.8111 3.98586C15.0527 3.74418 15.3805 3.6084 15.7223 3.6084ZM10.3097 5.15486C11.6769 5.15486 12.988 5.69796 13.9548 6.66468C14.9215 7.63141 15.4646 8.94257 15.4646 10.3097C15.4646 11.6769 14.9215 12.988 13.9548 13.9548C12.988 14.9215 11.6769 15.4646 10.3097 15.4646C8.94257 15.4646 7.63141 14.9215 6.66468 13.9548C5.69796 12.988 5.15486 11.6769 5.15486 10.3097C5.15486 8.94257 5.69796 7.63141 6.66468 6.66468C7.63141 5.69796 8.94257 5.15486 10.3097 5.15486ZM10.3097 7.2168C9.48943 7.2168 8.70273 7.54266 8.1227 8.1227C7.54266 8.70273 7.2168 9.48943 7.2168 10.3097C7.2168 11.13 7.54266 11.9167 8.1227 12.4967C8.70273 13.0768 9.48943 13.4026 10.3097 13.4026C11.13 13.4026 11.9167 13.0768 12.4967 12.4967C13.0768 11.9167 13.4026 11.13 13.4026 10.3097C13.4026 9.48943 13.0768 8.70273 12.4967 8.1227C11.9167 7.54266 11.13 7.2168 10.3097 7.2168Z"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              &#64;{{ .Page.Params.socialMedia.instagram }}
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ if .Page.Params.socialMedia.telegram }}
+                      <li
+                        class="social-media-item"
+                        uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 60"
+                      >
+                        <a
+                          a
+                          href="https://t.me/{{ .Page.Params.socialMedia.telegram }}"
+                          target="_blank"
+                          title="{{ .Title }} Telegram Channel"
+                        >
+                          <div class="grid-container">
+                            <div class="uk-flex uk-flex-center uk-flex-middle">
+                              <!-- Telegram Icon -->
+                              <svg
+                                width="39"
+                                height="33"
+                                viewBox="0 0 39 33"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M35.2365 0.36687L1.26039 13.5366C-0.106864 14.1499 -0.569309 15.378 0.929928 16.0446L9.64626 18.8289L30.7213 5.73681C31.872 4.91491 33.05 5.13408 32.0363 6.03822L13.9357 22.5118L13.3672 29.4833C13.8938 30.5597 14.8581 30.5648 15.4732 30.0297L20.481 25.2668L29.0576 31.7224C31.0496 32.9078 32.1335 32.1428 32.5621 29.9701L38.1876 3.19494C38.7717 0.520568 37.7757 -0.657788 35.2365 0.36687Z"
+                                  fill="#2F2F2F"
+                                />
+                              </svg>
+                            </div>
+                            <div>
+                              &#64;{{ .Page.Params.socialMedia.telegram }}
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                {{ end }}
               </div>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-      <div class="uk-container">{{ .Content }}</div>
-    </section>
-    <section>
-      <div
-        class="uk-container uk-margin-medium-top"
-        uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 160"
-      >
-        <h2 class="uk-text-center">Gallery</h2>
-        <div
-          class="uk-child-width-1-3@l uk-child-width-1-2@s uk-margin-small-top"
-          uk-grid
-          uk-lightbox="animation: slide"
-        >
-          {{ $themeStaticDir := "themes/hall-3/static" }}
-          {{ $imageDir := printf "%s/images/%s/%s/%s"   $themeStaticDir $baseCategory $subCategory $baseFileName }}
-          {{ $images := readDir $imageDir }}
-          {{ if $images }}
-            {{ range $images }}
-              {{ $imgName := .Name }}
-              {{ if not (or (eq $imgName "thumbnail.jpg") (eq $imgName "thumbnail.JPG") (eq $imgName "thumbnail.png") (eq $imgName "thumbnail.PNG")) }}
-                {{ $imgPath := printf "images/%s/%s/%s/%s" $baseCategory $subCategory $baseFileName $imgName }}
-                <div>
-                  <a class="uk-inline" href="{{ $imgPath | relURL }}">
-                    <img src="{{ $imgPath | relURL }}" alt="{{ $imgName }}" />
-                  </a>
+            </div>
+            <div class="uk-width-1-2@l">
+              <!-- Dynamically load the title, caption and images -->
+              {{ $baseFileName := .File.BaseFileName }}
+              {{ $normalizedPath := replace .File.Path "\\" "/" }}
+              <!-- Normalize path -->
+              {{ $sections := split $normalizedPath "/" }}
+
+
+              <!-- Get the base file name of the current file e.g. badminton -->
+              {{ $baseCategory := index $sections 0 }}
+              <!-- Get the category under hall-olympiad e.g. sports, recreational or cultural -->
+              {{ $subCategory := index $sections 1 }}
+
+              {{ $extensions := slice "jpg" "JPG" "png" "PNG" }}
+              {{ $imgPath := "" }}
+              {{ $imgSrc := "" }}
+              {{ $prefix := "static/" }}
+
+              {{ range $extensions }}
+                {{ $path := printf "static/images/%s/%s/%s/thumbnail.%s" $baseCategory $subCategory $baseFileName . }}
+                {{ if and (eq $imgPath "") (fileExists $path) }}
+                  {{ $imgPath = $path }}
+                  {{ $imgSrc = substr $imgPath (len $prefix) }}
+                {{ end }}
+              {{ end }}
+
+              {{ if $imgSrc }}
+                <div
+                  uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 160"
+                  class="uk-flex uk-flex-center uk-flex-column uk-height-1-1"
+                >
+                  <img src="{{ $imgSrc | relURL }}" alt="Thumbnail" />
+                </div>
+              {{ else }}
+                <div
+                  class="uk-flex uk-flex-center uk-flex-column uk-height-1-1"
+                >
+                  <p>No thumbnail available.</p>
                 </div>
               {{ end }}
-            {{ end }}
-          {{ else }}
-            <p>No images found in {{ $imageDir }}</p>
-          {{ end }}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  </article>
+        <div class="uk-container">{{ .Content }}</div>
+      </section>
+      <section>
+        <div
+          class="uk-container uk-margin-medium-top"
+          uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 160"
+        >
+          <h2 class="uk-text-center">Gallery</h2>
+          <div
+            class="uk-child-width-1-3@l uk-child-width-1-2@s uk-margin-small-top"
+            uk-grid
+            uk-lightbox="animation: slide"
+          >
+            {{ $themeStaticDir := "themes/hall-3/static" }}
+            {{ $imageDir := printf "%s/images/%s/%s/%s"   $themeStaticDir $baseCategory $subCategory $baseFileName }}
+            {{ $images := readDir $imageDir }}
+            {{ if $images }}
+              {{ range $images }}
+                {{ $imgName := .Name }}
+                {{ if not (or (eq $imgName "thumbnail.jpg") (eq $imgName "thumbnail.JPG") (eq $imgName "thumbnail.png") (eq $imgName "thumbnail.PNG")) }}
+                  {{ $imgPath := printf "images/%s/%s/%s/%s" $baseCategory $subCategory $baseFileName $imgName }}
+                  <div>
+                    <a class="uk-inline" href="{{ $imgPath | relURL }}">
+                      <img src="{{ $imgPath | relURL }}" alt="{{ $imgName }}" />
+                    </a>
+                  </div>
+                {{ end }}
+              {{ end }}
+            {{ else }}
+              <p>No images found in {{ $imageDir }}</p>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
 {{ end }}

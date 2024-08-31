@@ -1,8 +1,11 @@
 ---
 title: "Football"
 layout: "hall-olympiad/single"
-description: ""
-css: []
+css: 
+  - "css/single-hall-3-item.css"
 js: []
+params:
+  description: ""
+  socialMedia:
+    instagram: "hall3football"
 ---
-

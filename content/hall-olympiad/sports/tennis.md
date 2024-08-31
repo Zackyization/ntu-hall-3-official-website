@@ -1,8 +1,9 @@
 ---
 title: "Tennis"
 layout: "hall-olympiad/single"
-description: ""
-css: []
+css: 
+  - "css/single-hall-3-item.css"
 js: []
+params:
+  description: ""
 ---
-

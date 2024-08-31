@@ -1,3 +1,4 @@
+
 <article>
   <section id="about-hero" class="hero-section">
     <div class="uk-container">
@@ -12,10 +13,11 @@
         class="section-content uk-text-center"
         uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 180"
       >
-        <h1 class="page-title">About Us</h1>
+        <h1 class="page-title">
+           {{ .Page.Params.aboutHero.heading }}
+        </h1>
         <p>
-          Hall 3 is one of the many on-campus housing options made available to
-          the<br />undergraduates of Nanyang Technological University.
+           {{ .Page.Params.aboutHero.content | safeHTML }}
         </p>
         <form id="rental-rates-form">
           <button class="button" type="submit">
@@ -460,7 +462,7 @@
                 class="section-heading uk-text-right uk-margin-medium-top"
                 uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false"
               >
-                A Brief History
+               {{ .Page.Params.briefHistory.heading }}
               </h2>
             </div>
             <div
@@ -468,20 +470,7 @@
               uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 100"
             >
               <p>
-                Hall 3 is one of the older Halls of NTU with a rich tradition
-                and history.
-              </p>
-
-              <p>
-                It was originally located next to Hall 7 at Nanyang Link. In
-                2004, Hall 3 was relocated to it&apos;s current location at 52
-                Nanyang Walk to accommodate the construction of newer academic
-                buildings.
-              </p>
-
-              <p>
-                In 2010, Hall 3 was used to host the inaugural Youth Olympic
-                Games (YOG) village.
+              {{ .Page.Params.briefHistory.content | safeHTML }}
               </p>
             </div>
           </div>
