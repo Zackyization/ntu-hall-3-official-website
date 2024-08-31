@@ -1,5 +1,4 @@
 :root {
-  /* TODO: In the tablet/mobile views, use calc to make the responsive sizes for the committee items */
   --ho-item-image-width: 264px;
   --ho-item-image-height: 277px;
   --poster-image-width: 588px;
