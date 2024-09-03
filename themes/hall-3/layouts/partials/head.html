@@ -118,3 +118,11 @@
     <link rel="stylesheet" href="{{ . | relURL }}" />
   {{ end }}
 {{ end }}
+
+
+<!-- Conditionally preload images in a page -->
+{{ with .Params.preload }}
+  {{ range. }}
+    <link rel="preload" href="{{ . | relURL }}" as="image" />
+  {{ end }}
+{{ end }}

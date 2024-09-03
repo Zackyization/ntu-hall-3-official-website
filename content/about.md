@@ -14,6 +14,8 @@ params:
       Hall 3 is one of the older Halls of NTU with a rich tradition and history.<br><br>
       It was originally located next to Hall 7 at Nanyang Link. In 2004, Hall 3 was relocated to its current location at 52 Nanyang Walk to accommodate the construction of newer academic buildings.<br><br>
       In 2010, Hall 3 was used to host the inaugural Youth Olympic Games (YOG) village.
+    preload:
+      - "images/page_hero_images/Hall_3_image.png"
 css:
   - "css/about.css"
   - "components/vertical-accordion/vertical-accordion.css"
