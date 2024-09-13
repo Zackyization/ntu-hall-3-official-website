@@ -12,5 +12,5 @@ params:
     <br><br>
     Join us for a thrilling, fun-filled sporting adventure. For more details, get in touch with our Softball Captains!
   socialMedia:
-    instagram: "hall3_sb"
+    instagram: "hall3_sluggers"
 ---
