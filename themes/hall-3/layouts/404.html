@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{ partial "head.html" . }}
 
-
-    <link rel="stylesheet" href="{{ "css/404.css" | relURL }}" />
+    {{ $css := resources.Get "css/404.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}" />
   </head>
   <body>
     {{ partial "header.html" . }}
@@ -228,13 +228,25 @@
       </article>
     </main>
     {{ partial "footer.html" . }}
-    <script src="{{ "js/navbar.js" | relURL }}"></script>
+   
+    <!-- Minify and fingerprint navbar.js -->
+    {{ $navbarJs := resources.Get "js/navbar.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $navbarJs.Permalink }}" defer></script>
+
     <!-- Conditionally include page-specific JS -->
     {{ with .Params.js }}
       {{ range . }}
-        <script src="{{ . | relURL }}"></script>
+        {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
+          <!-- External URL, include directly -->
+          <script src="{{ . }}" defer></script>
+        {{ else }}
+          <!-- Local file, process with Hugo's asset pipeline -->
+          {{ $js := resources.Get . | resources.Minify | resources.Fingerprint }}
+          <script src="{{ $js.Permalink }}" defer></script>
+        {{ end }}
       {{ end }}
     {{ end }}
+
     <script>
       let redirectForm = document.getElementById("home-page-redirect-form");
       redirectForm.addEventListener("submit", function (event) {

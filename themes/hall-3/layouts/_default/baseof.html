@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,12 +11,23 @@
     {{ partial "footer.html" . }}
 
 
-    <script src="{{ "js/navbar.js" | relURL }}"></script>
+    <!-- Minify and fingerprint navbar.js -->
+    {{ $navbarJs := resources.Get "js/navbar.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $navbarJs.Permalink }}" defer></script>
+
     <!-- Conditionally include page-specific JS -->
     {{ with .Params.js }}
       {{ range . }}
-        <script src="{{ . | relURL }}"></script>
+        {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
+          <!-- External URL, include directly -->
+          <script src="{{ . }}" defer></script>
+        {{ else }}
+          <!-- Local file, process with Hugo's asset pipeline -->
+          {{ $js := resources.Get . | resources.Minify | resources.Fingerprint }}
+          <script src="{{ $js.Permalink }}" defer></script>
+        {{ end }}
       {{ end }}
     {{ end }}
+
   </body>
 </html>

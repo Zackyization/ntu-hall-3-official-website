@@ -90,8 +90,16 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" as="style" />
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" as="style" />
+<link
+  rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+  as="style"
+/>
+<link
+  rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+  as="style"
+/>
 <link
   href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
   rel="stylesheet"
@@ -112,12 +120,20 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
 
 <!-- General Styles Stylesheet -->
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+{{ $styles := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" />
 
 <!-- Conditionally include page-specific CSS -->
 {{ with .Params.css }}
   {{ range . }}
-    <link rel="stylesheet" href="{{ . | relURL }}" />
+    {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
+      <!-- External URL, include directly -->
+      <link rel="stylesheet" href="{{ . }}" />
+    {{ else }}
+      <!-- Local file, process with Hugo's asset pipeline -->
+      {{ $css := resources.Get . | resources.Minify | resources.Fingerprint }}
+      <link rel="stylesheet" href="{{ $css.Permalink }}" />
+    {{ end }}
   {{ end }}
 {{ end }}
 
