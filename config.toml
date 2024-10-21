@@ -1,4 +1,4 @@
-baseURL = 'http://hall3.netlify.app'
+baseURL = 'https://hall3.netlify.app'
 languageCode = 'en-us'
 title = 'Hall 3 Official Website'
 theme = 'hall-3'
