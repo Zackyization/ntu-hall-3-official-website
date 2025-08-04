@@ -1,5 +1,5 @@
 ---
-title: "Elite Night Cycling"
+title: "Elite Night Cycling (Inactive)"
 layout: "committees/single"
 css: 
   - "css/single-hall-3-item.css"

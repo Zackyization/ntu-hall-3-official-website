@@ -82,6 +82,10 @@ ul.committees .uk-grid {
   z-index: -1;
 }
 
+.committee-item.committee-item-disabled .image-background {
+  background: linear-gradient(45deg, #353535, #6a6a6a) !important;
+}
+
 .committee-item .caption {
   position: absolute;
   top: 0;
@@ -108,6 +112,10 @@ ul.committees .uk-grid {
   z-index: 3;
 }
 
+.committee-item.committee-item-disabled .caption-background {
+  background: linear-gradient(45deg, #353535, #6a6a6a) !important;
+}
+
 #committee-list .grid-container {
   gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -117,6 +125,7 @@ ul.committees .uk-grid {
 /* Images for the committee items */
 #ENC .image::before {
   background-image: url(../images/committee/elite-night-cycling/thumbnail.JPG);
+  filter: grayscale(75%);
 }
 
 #Hall-Council .image::before {
@@ -189,7 +198,9 @@ ul.committees .uk-grid {
   #committee-list .grid-container {
     gap: 36px;
     grid-template-columns: 1fr;
-    grid-template-rows: var(--committee-image-height) calc(2 * var(--committee-image-height) + 36) var(--committee-image-height);
+    grid-template-rows:
+      var(--committee-image-height) calc(2 * var(--committee-image-height) + 36)
+      var(--committee-image-height);
   }
 
   .mobile-flex {
